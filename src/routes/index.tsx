@@ -29,8 +29,10 @@ function Home() {
   return (
     <div className="min-h-screen bg-background">
       <SplashScreen />
-      <AlertBar />
-      <Navbar />
+      <div className="sticky top-0 z-50">
+        <AlertBar />
+        <Navbar />
+      </div>
       <main>
         <Hero />
         <Courses />

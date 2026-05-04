@@ -15,7 +15,7 @@ const links = [
 export function Navbar() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="sticky top-10 z-50 glass border-b border-border">
+    <header className="relative glass border-b border-border">
       <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
         <a href="#home" className="flex items-center gap-3">
           <img src={logo} alt="Dropper's Club" className="w-11 h-11 rounded-full ring-2 ring-primary/40" />
