@@ -15,7 +15,7 @@ const links = [
 export function Navbar() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="sticky top-0 z-50 glass">
+    <header className="sticky top-10 z-50 glass border-b border-border">
       <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
         <a href="#home" className="flex items-center gap-3">
           <img src={logo} alt="Dropper's Club" className="w-11 h-11 rounded-full ring-2 ring-primary/40" />
@@ -34,7 +34,7 @@ export function Navbar() {
         </nav>
         <div className="hidden md:block">
           <Button asChild className="bg-gradient-brand text-primary-foreground hover:opacity-90 font-semibold">
-            <a href="#register">Enroll Now</a>
+            <a href="#register">Register Now</a>
           </Button>
         </div>
         <button className="md:hidden" onClick={() => setOpen(!open)}>
@@ -46,7 +46,7 @@ export function Navbar() {
           {links.map((l) => (
             <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="text-sm">{l.label}</a>
           ))}
-          <Button asChild className="bg-gradient-brand text-primary-foreground"><a href="#register">Enroll Now</a></Button>
+          <Button asChild className="bg-gradient-brand text-primary-foreground"><a href="#register">Register Now</a></Button>
         </div>
       )}
     </header>
