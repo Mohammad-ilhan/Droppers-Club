@@ -139,10 +139,4 @@
     50% { transform: translateY(-15px); }
   }
 
-  .grid-bg {
-    background-image:
-      linear-gradient(oklch(1 0 0 / 0.04) 1px, transparent 1px),
-      linear-gradient(90deg, oklch(1 0 0 / 0.04) 1px, transparent 1px);
-    background-size: 40px 40px;
-  }
 }
