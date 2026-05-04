@@ -1,18 +1,18 @@
 import { motion } from "framer-motion";
 
 const faculty = [
-  { name: "Faculty 1", subject: "Physics", qual: "M.Sc, IIT Delhi" },
-  { name: "Faculty 2", subject: "Chemistry", qual: "Ph.D, IIT Bombay" },
-  { name: "Faculty 3", subject: "Biology", qual: "MBBS, AIIMS" },
-  { name: "Faculty 4", subject: "Mathematics", qual: "M.Sc, IIT Kanpur" },
-  { name: "Faculty 5", subject: "Organic Chem", qual: "M.Sc, IISc" },
-  { name: "Faculty 6", subject: "Zoology", qual: "M.Sc, BHU" },
+  { name: "Dr. R. Sharma", subject: "Physics", qual: "M.Sc, IIT Delhi · 12+ yrs" },
+  { name: "Dr. P. Kapoor", subject: "Chemistry", qual: "Ph.D, IIT Bombay · 10+ yrs" },
+  { name: "Dr. A. Verma", subject: "Biology", qual: "MBBS, AIIMS · 8+ yrs" },
+  { name: "Prof. S. Joshi", subject: "Mathematics", qual: "M.Sc, IIT Kanpur · 14+ yrs" },
+  { name: "Dr. N. Iyer", subject: "Organic Chem", qual: "M.Sc, IISc Bangalore · 9+ yrs" },
+  { name: "Dr. M. Rao", subject: "Zoology", qual: "M.Sc, BHU · 11+ yrs" },
 ];
 
 export function Faculty() {
   return (
     <section id="faculty" className="relative py-28 px-6 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-card/40 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-muted/40 to-transparent" />
       <div className="relative max-w-7xl mx-auto">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
           <p className="text-xs tracking-[0.3em] text-secondary uppercase">Meet the Mentors</p>
@@ -26,11 +26,11 @@ export function Faculty() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="relative mb-16 perspective-1000"
+          className="relative mb-20"
         >
-          <div className="absolute -inset-6 bg-gradient-brand opacity-20 blur-3xl rounded-[3rem]" />
+          <div className="absolute -inset-6 bg-gradient-brand opacity-15 blur-3xl rounded-[3rem]" />
           <div className="relative glass rounded-[2.5rem] p-4 md:p-6 shadow-3d">
-            <div className="aspect-[16/8] rounded-3xl bg-gradient-to-br from-primary/15 to-secondary/15 border border-border flex items-center justify-center">
+            <div className="aspect-[16/8] rounded-3xl bg-gradient-to-br from-primary/10 to-secondary/10 border border-border flex items-center justify-center">
               <div className="text-center p-8">
                 <div className="text-6xl mb-3">👥</div>
                 <p className="text-lg font-semibold">[ Group Photo of All Faculty ]</p>
@@ -43,28 +43,30 @@ export function Faculty() {
           </div>
         </motion.div>
 
-        {/* Individual cards */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
+        {/* Individual cards — qualifications always visible */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {faculty.map((f, i) => (
             <motion.div
               key={f.name}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.05 }}
-              className="group relative"
+              transition={{ delay: i * 0.06 }}
+              className="lift glass rounded-3xl p-6 shadow-3d flex gap-5 items-center"
             >
-              <div className="relative overflow-hidden rounded-2xl glass shadow-3d aspect-[3/4]">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center text-4xl">
+              <div className="relative shrink-0">
+                <div className="absolute -inset-1 bg-gradient-brand rounded-3xl blur opacity-40" />
+                <div className="relative w-24 h-28 rounded-2xl bg-gradient-to-br from-primary/15 to-secondary/15 border border-border flex items-center justify-center text-3xl">
                   🎓
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-transparent opacity-90 group-hover:opacity-100 transition-opacity" />
-                <div className="absolute inset-x-0 bottom-0 p-4 translate-y-2 group-hover:translate-y-0 transition-transform">
-                  <div className="text-xs text-secondary tracking-widest uppercase">{f.subject}</div>
-                  <div className="font-bold mt-1">{f.name}</div>
-                  <div className="text-[11px] text-muted-foreground mt-1 opacity-0 group-hover:opacity-100 transition-opacity">{f.qual}</div>
+              </div>
+              <div className="min-w-0">
+                <div className="text-[10px] tracking-[0.25em] uppercase text-secondary font-semibold">{f.subject}</div>
+                <div className="text-lg font-bold mt-1 truncate">{f.name}</div>
+                <div className="text-sm text-muted-foreground mt-1.5 leading-snug">{f.qual}</div>
+                <div className="mt-3 inline-flex items-center gap-1.5 text-[11px] font-semibold text-primary">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary" /> Verified Mentor
                 </div>
-                <div className="absolute inset-0 ring-2 ring-secondary/0 group-hover:ring-secondary/60 rounded-2xl transition-all" />
               </div>
             </motion.div>
           ))}
