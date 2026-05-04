@@ -48,7 +48,7 @@ export function Footer() {
             <iframe
               title="Map"
               src="https://www.openstreetmap.org/export/embed.html?bbox=77.40%2C23.18%2C77.50%2C23.25&layer=mapnik"
-              className="w-full h-full grayscale opacity-80"
+              className="w-full h-full"
             />
           </div>
         </div>
