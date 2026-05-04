@@ -37,40 +37,43 @@
 }
 
 :root {
+  color-scheme: light only;
   --radius: 1rem;
-  --background: oklch(0.08 0.01 250);
-  --foreground: oklch(0.98 0.005 250);
-  --card: oklch(0.13 0.015 255);
-  --card-foreground: oklch(0.98 0.005 250);
-  --popover: oklch(0.13 0.015 255);
-  --popover-foreground: oklch(0.98 0.005 250);
-  --primary: oklch(0.7 0.18 145);
-  --primary-foreground: oklch(0.1 0.01 250);
-  --secondary: oklch(0.72 0.18 55);
-  --secondary-foreground: oklch(0.1 0.01 250);
-  --muted: oklch(0.18 0.02 255);
-  --muted-foreground: oklch(0.7 0.02 255);
-  --accent: oklch(0.72 0.18 55);
-  --accent-foreground: oklch(0.1 0.01 250);
-  --destructive: oklch(0.65 0.24 27);
-  --destructive-foreground: oklch(0.98 0.005 250);
-  --border: oklch(1 0 0 / 0.1);
-  --input: oklch(1 0 0 / 0.12);
-  --ring: oklch(0.7 0.18 145);
+  --background: oklch(0.985 0.008 95);
+  --foreground: oklch(0.18 0.02 250);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.02 250);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.02 250);
+  --primary: oklch(0.58 0.17 145);
+  --primary-foreground: oklch(0.99 0.005 95);
+  --secondary: oklch(0.68 0.18 55);
+  --secondary-foreground: oklch(0.15 0.02 60);
+  --muted: oklch(0.95 0.01 95);
+  --muted-foreground: oklch(0.45 0.02 250);
+  --accent: oklch(0.68 0.18 55);
+  --accent-foreground: oklch(0.15 0.02 60);
+  --destructive: oklch(0.6 0.22 27);
+  --destructive-foreground: oklch(0.99 0.005 95);
+  --border: oklch(0.18 0.02 250 / 0.12);
+  --input: oklch(0.18 0.02 250 / 0.14);
+  --ring: oklch(0.58 0.17 145);
 
-  --brand-green: oklch(0.62 0.18 145);
-  --brand-orange: oklch(0.72 0.18 55);
+  --brand-green: oklch(0.55 0.18 145);
+  --brand-orange: oklch(0.68 0.19 55);
 
-  --gradient-hero: radial-gradient(ellipse at top left, oklch(0.62 0.18 145 / 0.25), transparent 50%),
-                   radial-gradient(ellipse at bottom right, oklch(0.72 0.18 55 / 0.22), transparent 55%),
-                   linear-gradient(180deg, oklch(0.08 0.01 250), oklch(0.05 0.01 250));
+  --gradient-hero: radial-gradient(ellipse at top left, oklch(0.55 0.18 145 / 0.18), transparent 55%),
+                   radial-gradient(ellipse at bottom right, oklch(0.68 0.19 55 / 0.18), transparent 60%),
+                   linear-gradient(180deg, oklch(0.985 0.008 95), oklch(0.97 0.012 90));
   --gradient-brand: linear-gradient(135deg, var(--brand-green), var(--brand-orange));
-  --gradient-card: linear-gradient(145deg, oklch(0.16 0.02 255 / 0.9), oklch(0.1 0.015 255 / 0.6));
+  --gradient-card: linear-gradient(145deg, oklch(1 0 0 / 0.85), oklch(0.97 0.01 95 / 0.65));
 
-  --shadow-glow-green: 0 20px 60px -20px oklch(0.62 0.18 145 / 0.5);
-  --shadow-glow-orange: 0 20px 60px -20px oklch(0.72 0.18 55 / 0.5);
-  --shadow-3d: 0 30px 60px -15px oklch(0 0 0 / 0.6), 0 0 0 1px oklch(1 0 0 / 0.05) inset;
+  --shadow-glow-green: 0 20px 60px -20px oklch(0.55 0.18 145 / 0.45);
+  --shadow-glow-orange: 0 20px 60px -20px oklch(0.68 0.19 55 / 0.45);
+  --shadow-3d: 0 24px 50px -18px oklch(0.18 0.02 250 / 0.22), 0 1px 0 0 oklch(1 0 0 / 0.6) inset;
 }
+
+.dark, html.dark, [data-theme="dark"] { color-scheme: light only; }
 
 @layer base {
   * { border-color: var(--color-border); }
@@ -98,9 +101,22 @@
     color: transparent;
   }
   .glass {
-    background: oklch(1 0 0 / 0.04);
-    backdrop-filter: blur(20px);
-    border: 1px solid oklch(1 0 0 / 0.08);
+    background: oklch(1 0 0 / 0.7);
+    backdrop-filter: blur(20px) saturate(140%);
+    border: 1px solid oklch(0.18 0.02 250 / 0.08);
+  }
+  .grid-bg {
+    background-image:
+      linear-gradient(oklch(0.18 0.02 250 / 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, oklch(0.18 0.02 250 / 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .lift {
+    transition: transform 0.35s cubic-bezier(.2,.8,.2,1), box-shadow 0.35s ease, border-color 0.35s ease;
+  }
+  .lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 30px 60px -22px oklch(0.18 0.02 250 / 0.18);
   }
   .perspective-1000 { perspective: 1000px; }
   .preserve-3d { transform-style: preserve-3d; }
@@ -123,10 +139,4 @@
     50% { transform: translateY(-15px); }
   }
 
-  .grid-bg {
-    background-image:
-      linear-gradient(oklch(1 0 0 / 0.04) 1px, transparent 1px),
-      linear-gradient(90deg, oklch(1 0 0 / 0.04) 1px, transparent 1px);
-    background-size: 40px 40px;
-  }
 }

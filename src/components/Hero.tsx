@@ -51,28 +51,22 @@ export function Hero() {
           </div>
         </motion.div>
 
-        {/* 3D Owner Card */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9, rotateY: -20 }}
-          animate={{ opacity: 1, scale: 1, rotateY: 0 }}
-          transition={{ duration: 1, delay: 0.3 }}
-          className="lg:col-span-5 perspective-1000"
+          initial={{ opacity: 0, y: 30, scale: 0.96 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.9, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+          className="lg:col-span-5"
         >
-          <motion.div
-            whileHover={{ rotateY: 8, rotateX: -5 }}
-            transition={{ type: "spring", stiffness: 200 }}
-            className="relative preserve-3d"
-          >
-            <div className="absolute -inset-4 bg-gradient-brand opacity-30 blur-2xl rounded-3xl" />
-            <div className="relative glass rounded-3xl p-6 shadow-3d">
-              <div className="aspect-[4/5] rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 border border-border flex items-center justify-center overflow-hidden">
-                {/* OWNER PHOTO PLACEHOLDER */}
+          <div className="relative lift">
+            <div className="absolute -inset-4 bg-gradient-brand opacity-25 blur-2xl rounded-3xl" />
+            <div className="relative glass rounded-3xl p-6 shadow-3d border border-border/60">
+              <div className="aspect-[4/5] rounded-2xl bg-gradient-to-br from-primary/15 to-secondary/15 border border-border flex items-center justify-center overflow-hidden">
                 <div className="text-center p-8">
                   <div className="w-24 h-24 rounded-full bg-gradient-brand mx-auto mb-4 flex items-center justify-center text-3xl font-bold text-primary-foreground float">
                     👤
                   </div>
                   <p className="text-sm text-muted-foreground italic">[ Owner / Director Photo ]</p>
-                  <p className="text-xs text-muted-foreground/60 mt-1">Reserved space</p>
+                  <p className="text-xs text-muted-foreground/70 mt-1">Reserved space</p>
                 </div>
               </div>
               <div className="mt-5 flex items-end justify-between">
@@ -85,7 +79,7 @@ export function Hero() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </motion.div>
       </div>
     </section>

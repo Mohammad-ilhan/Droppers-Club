@@ -10,7 +10,7 @@ export function AlertBar() {
   ];
   const all = [...items, ...items];
   return (
-    <div className="relative overflow-hidden bg-gradient-brand text-primary-foreground py-2 border-b border-white/10">
+    <div className="relative overflow-hidden bg-gradient-brand text-primary-foreground py-2 shadow-md">
       <div className="marquee gap-12 px-6 text-sm font-semibold">
         {all.map((t, i) => (
           <span key={i} className="flex items-center gap-3 whitespace-nowrap">

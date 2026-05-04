@@ -19,7 +19,7 @@ export function Courses() {
           <h2 className="text-4xl md:text-6xl font-bold mt-3">Courses That <span className="text-gradient-brand">Shape Futures</span></h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 perspective-1000">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {courses.map((c, i) => (
             <motion.div
               key={c.title}
@@ -27,11 +27,10 @@ export function Courses() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08 }}
-              whileHover={{ y: -8, rotateX: 5, rotateY: -5 }}
-              className="group relative preserve-3d"
+              className="group relative lift"
             >
-              <div className="absolute inset-0 bg-gradient-brand opacity-0 group-hover:opacity-30 blur-2xl rounded-3xl transition-opacity" />
-              <div className="relative h-full glass rounded-3xl p-7 shadow-3d overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-brand opacity-0 group-hover:opacity-15 blur-2xl rounded-3xl transition-opacity" />
+              <div className="relative h-full glass rounded-3xl p-7 shadow-3d overflow-hidden border border-border/60">
                 <div className={`absolute -top-12 -right-12 w-40 h-40 rounded-full bg-gradient-to-br ${c.color} opacity-20 blur-2xl`} />
                 <div className="flex items-start justify-between mb-6">
                   <div className="w-14 h-14 rounded-2xl bg-gradient-brand flex items-center justify-center shadow-glow-green">
