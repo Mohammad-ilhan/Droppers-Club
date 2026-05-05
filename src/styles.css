@@ -114,6 +114,8 @@
   .shadow-soft { box-shadow: var(--shadow-soft); }
   .shadow-glow-navy { box-shadow: var(--shadow-glow-navy); }
   .shadow-glow-gold { box-shadow: var(--shadow-glow-gold); }
+  .shadow-glow-orange { box-shadow: var(--shadow-glow-gold); }
+  .shadow-glow-green { box-shadow: var(--shadow-glow-navy); }
 
   .text-gradient-brand {
     background: var(--gradient-brand);
