@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/logo.jpeg";
+import { Monogram } from "./Monogram";
 import { Button } from "@/components/ui/button";
 
 const links = [
@@ -15,13 +15,13 @@ const links = [
 export function Navbar() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="relative glass border-b border-border">
+    <header className="relative bg-background/85 backdrop-blur-xl border-b border-border">
       <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
-        <a href="#home" className="flex items-center gap-3">
-          <img src={logo} alt="Dropper's Club" className="w-11 h-11 rounded-full ring-2 ring-primary/40" />
+        <a href="#home" className="flex items-center gap-3 group">
+          <Monogram size={42} className="transition-transform duration-500 group-hover:rotate-[-6deg]" />
           <div className="leading-tight">
-            <div className="font-bold text-lg">Dropper's Club</div>
-            <div className="text-[10px] tracking-widest text-muted-foreground uppercase">Crafting Toppers</div>
+            <div className="font-display font-semibold text-lg tracking-tight">Dropper's Club</div>
+            <div className="text-[9px] tracking-[0.35em] text-muted-foreground uppercase">Crafting Toppers</div>
           </div>
         </a>
         <nav className="hidden md:flex items-center gap-8">
@@ -33,7 +33,7 @@ export function Navbar() {
           ))}
         </nav>
         <div className="hidden md:block">
-          <Button asChild className="bg-gradient-brand text-primary-foreground hover:opacity-90 font-semibold">
+          <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-full px-6">
             <a href="#register">Register Now</a>
           </Button>
         </div>
@@ -46,7 +46,7 @@ export function Navbar() {
           {links.map((l) => (
             <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="text-sm">{l.label}</a>
           ))}
-          <Button asChild className="bg-gradient-brand text-primary-foreground"><a href="#register">Register Now</a></Button>
+          <Button asChild className="bg-primary text-primary-foreground rounded-full"><a href="#register">Register Now</a></Button>
         </div>
       )}
     </header>
