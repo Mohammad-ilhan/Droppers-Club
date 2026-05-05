@@ -29,19 +29,19 @@ export function Courses() {
               transition={{ delay: i * 0.08 }}
               className="group relative lift"
             >
-              <div className="absolute inset-0 bg-gradient-brand opacity-0 group-hover:opacity-15 blur-2xl rounded-3xl transition-opacity" />
-              <div className="relative h-full glass rounded-3xl p-7 shadow-3d overflow-hidden border border-border/60">
-                <div className={`absolute -top-12 -right-12 w-40 h-40 rounded-full bg-gradient-to-br ${c.color} opacity-20 blur-2xl`} />
+              <div className="absolute inset-0 bg-gradient-gold opacity-0 group-hover:opacity-15 blur-2xl rounded-3xl transition-opacity" />
+              <div className="relative h-full bg-card rounded-3xl p-7 shadow-soft overflow-hidden border border-border">
+                <div className={`absolute -top-12 -right-12 w-40 h-40 rounded-full bg-gradient-to-br ${c.color} opacity-15 blur-2xl`} />
                 <div className="flex items-start justify-between mb-6">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-brand flex items-center justify-center shadow-glow-green">
-                    <c.icon className="w-7 h-7 text-primary-foreground" />
+                  <div className="w-14 h-14 rounded-2xl bg-primary flex items-center justify-center shadow-glow-navy">
+                    <c.icon className="w-7 h-7 text-secondary" />
                   </div>
-                  <span className="text-[10px] tracking-widest uppercase glass px-3 py-1 rounded-full">{c.tag}</span>
+                  <span className="text-[10px] tracking-[0.2em] uppercase bg-primary/5 text-primary border border-primary/15 px-3 py-1 rounded-full font-semibold">{c.tag}</span>
                 </div>
-                <h3 className="text-2xl font-bold">{c.title}</h3>
-                <p className="text-sm text-muted-foreground mt-2">{c.desc}</p>
-                <a href="#register" className="inline-flex items-center gap-2 mt-6 text-sm font-semibold text-secondary hover:gap-3 transition-all">
-                  Learn more →
+                <h3 className="text-2xl font-display font-semibold text-primary">{c.title}</h3>
+                <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{c.desc}</p>
+                <a href="#register" className="inline-flex items-center gap-2 mt-6 text-sm font-semibold text-primary hover:gap-3 transition-all">
+                  Learn more <span className="text-secondary">→</span>
                 </a>
               </div>
             </motion.div>
