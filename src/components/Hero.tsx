@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles, Trophy, Users, Star } from "lucide-react";
+import { ArrowRight, Sparkles, Trophy, Users, Star, Quote } from "lucide-react";
 
 export function Hero() {
   return (
@@ -26,8 +26,17 @@ export function Hero() {
             become <span className="italic font-normal" style={{ fontFamily: "var(--font-script)" }}>toppers.</span>
           </h1>
 
-          <p className="mt-7 text-lg text-muted-foreground max-w-xl leading-relaxed">
-            A revolutionary coaching ecosystem built for serious aspirants. Personal mentorship, IIT &amp; AIIMS faculty, and a winning culture — all under one roof.
+          <div className="mt-7 flex items-start gap-3 max-w-xl">
+            <Quote className="w-5 h-5 text-secondary shrink-0 mt-1" />
+            <p
+              className="text-2xl md:text-[1.7rem] leading-snug text-primary"
+              style={{ fontFamily: "var(--font-script)" }}
+            >
+              The connecting link between Students &amp; Success.
+            </p>
+          </div>
+          <p className="mt-4 text-base text-muted-foreground max-w-xl leading-relaxed">
+            Personal mentorship, IIT &amp; AIIMS faculty, and a winning culture — all under one roof.
           </p>
 
           <div className="mt-9 flex flex-wrap gap-4">
