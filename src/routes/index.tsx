@@ -4,6 +4,8 @@ import { AlertBar } from "@/components/AlertBar";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { Courses } from "@/components/Courses";
+import { WhyUs } from "@/components/WhyUs";
+import { Gallery } from "@/components/Gallery";
 import { Faculty } from "@/components/Faculty";
 import { Results } from "@/components/Results";
 import { Testimonials } from "@/components/Testimonials";
@@ -36,7 +38,9 @@ function Home() {
       <main>
         <Hero />
         <Courses />
+        <WhyUs />
         <Faculty />
+        <Gallery />
         <Results />
         <Testimonials />
         <Reviews />
