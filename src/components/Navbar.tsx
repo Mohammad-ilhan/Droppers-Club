@@ -9,8 +9,9 @@ const links = [
   { href: "#why-us", label: "Why Us" },
   { href: "#faculty", label: "Faculty" },
   { href: "#gallery", label: "Gallery" },
+  { href: "#resources", label: "Resources" },
   { href: "#results", label: "Results" },
-  { href: "#testimonials", label: "Testimonials" },
+  { href: "#testimonials", label: "Reviews" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -18,12 +19,12 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
   return (
     <header className="relative bg-background/85 backdrop-blur-xl border-b border-border">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-4 flex items-center justify-between gap-8">
-        <a href="#home" className="flex items-center gap-3 group shrink-0">
-          <Monogram size={44} className="transition-transform duration-500 group-hover:rotate-[-6deg]" />
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 py-3 sm:py-4 flex items-center justify-between gap-4 sm:gap-8">
+        <a href="#home" className="flex items-center gap-2 sm:gap-3 group shrink-0">
+          <Monogram size={40} className="sm:!w-11 sm:!h-11 transition-transform duration-500 group-hover:rotate-[-6deg]" />
           <div className="leading-tight">
-            <div className="font-display font-semibold text-lg tracking-tight">Dropper's Club</div>
-            <div className="text-[9px] tracking-[0.35em] text-muted-foreground uppercase">Crafting Toppers</div>
+            <div className="font-display font-semibold text-base sm:text-lg tracking-tight">Dropper's Club</div>
+            <div className="hidden sm:block text-[9px] tracking-[0.35em] text-muted-foreground uppercase">Crafting Toppers</div>
           </div>
         </a>
         <nav className="hidden lg:flex items-center gap-7 xl:gap-9">

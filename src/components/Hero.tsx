@@ -9,7 +9,7 @@ export function Hero() {
       <div className="absolute -top-40 -right-40 w-[28rem] h-[28rem] rounded-full bg-secondary/20 blur-3xl" />
       <div className="absolute -bottom-40 -left-40 w-[28rem] h-[28rem] rounded-full bg-primary/15 blur-3xl" />
 
-      <div className="relative max-w-7xl mx-auto px-6 pt-20 pb-32 grid lg:grid-cols-12 gap-12 items-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 pt-12 sm:pt-16 lg:pt-20 pb-16 sm:pb-24 lg:pb-32 grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -21,7 +21,7 @@ export function Hero() {
             <span className="text-primary tracking-wide">Bhopal's Premier NEET & JEE Institute</span>
           </div>
 
-          <h1 className="font-display text-5xl md:text-7xl lg:text-[5.5rem] font-semibold leading-[0.98] text-primary">
+          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-[5.5rem] font-semibold leading-[1.02] sm:leading-[0.98] text-primary">
             Where <span className="italic font-normal text-gradient-gold">droppers</span><br />
             become <span className="italic font-normal" style={{ fontFamily: "var(--font-script)" }}>toppers.</span>
           </h1>
@@ -29,7 +29,7 @@ export function Hero() {
           <div className="mt-7 flex items-start gap-3 max-w-xl">
             <Quote className="w-5 h-5 text-secondary shrink-0 mt-1" />
             <p
-              className="text-2xl md:text-[1.7rem] leading-snug text-primary"
+              className="text-xl sm:text-2xl md:text-[1.7rem] leading-snug text-primary"
               style={{ fontFamily: "var(--font-script)" }}
             >
               The connecting link between Students &amp; Success.
@@ -48,16 +48,16 @@ export function Hero() {
             </Button>
           </div>
 
-          <div className="mt-14 grid grid-cols-3 gap-6 max-w-md">
+          <div className="mt-10 sm:mt-14 grid grid-cols-3 gap-3 sm:gap-6 max-w-md">
             {[
               { n: "1200+", l: "Selections", i: Trophy },
               { n: "25+", l: "Expert Faculty", i: Users },
               { n: "98%", l: "Result Rate", i: Sparkles },
             ].map((s) => (
-              <div key={s.l} className="bg-card/70 backdrop-blur border border-border rounded-2xl p-4 shadow-soft">
-                <s.i className="w-5 h-5 text-secondary mb-2" />
-                <div className="text-2xl font-display font-semibold text-primary">{s.n}</div>
-                <div className="text-xs text-muted-foreground mt-0.5">{s.l}</div>
+              <div key={s.l} className="bg-card/70 backdrop-blur border border-border rounded-2xl p-3 sm:p-4 shadow-soft">
+                <s.i className="w-4 h-4 sm:w-5 sm:h-5 text-secondary mb-1.5 sm:mb-2" />
+                <div className="text-lg sm:text-2xl font-display font-semibold text-primary">{s.n}</div>
+                <div className="text-[10px] sm:text-xs text-muted-foreground mt-0.5">{s.l}</div>
               </div>
             ))}
           </div>

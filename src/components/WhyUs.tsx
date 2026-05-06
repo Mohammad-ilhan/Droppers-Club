@@ -5,7 +5,7 @@ import {
 } from "lucide-react";
 
 const pillars = [
-  { icon: Target, title: "Personal Mentorship", desc: "1-on-1 mentor assigned to every student. Weekly performance review with parents." },
+  { icon: Target, title: "Personal Mentorship", desc: "1-on-1 mentor assigned to every student. Monthly performance review with parents." },
   { icon: ClipboardCheck, title: "Daily Practice & Tests", desc: "DPPs every day, full-length tests every week — exam-ready from day one." },
   { icon: Users, title: "Small Batch Sizes", desc: "Capped batches so every doubt is heard and every student is tracked." },
   { icon: BookOpen, title: "Printed Study Material", desc: "Inhouse modules updated yearly — concise theory, tiered problems, PYQs." },

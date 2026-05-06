@@ -2,12 +2,12 @@ import { motion } from "framer-motion";
 import { Atom, Stethoscope, GraduationCap, BookOpen, FlaskConical, Brain } from "lucide-react";
 
 const courses = [
-  { title: "NEET", desc: "Complete medical entrance prep with AIIMS faculty.", icon: Stethoscope, tag: "Most Popular", color: "from-primary to-primary/40" },
-  { title: "JEE Mains & Advanced", desc: "IIT-pattern coaching for serious engineers.", icon: Atom, tag: "Advanced", color: "from-secondary to-secondary/40" },
-  { title: "Class 11 & 12", desc: "Board + competitive integrated program.", icon: GraduationCap, tag: "Foundation", color: "from-primary to-secondary" },
-  { title: "Class 9 & 10", desc: "Build the early edge — concepts that last.", icon: BookOpen, tag: "Early Start", color: "from-secondary to-primary" },
-  { title: "Foundation Olympiad", desc: "NTSE, KVPY, science olympiads.", icon: FlaskConical, tag: "Special", color: "from-primary to-primary/40" },
-  { title: "Crash Courses", desc: "Last-mile revision for droppers.", icon: Brain, tag: "Limited", color: "from-secondary to-secondary/40" },
+  { title: "NEET", desc: "Complete medical entrance prep with AIIMS faculty.", icon: Stethoscope, color: "from-primary to-primary/40" },
+  { title: "JEE Mains", desc: "IIT-pattern coaching for serious engineers.", icon: Atom, color: "from-secondary to-secondary/40" },
+  { title: "Class 11 & 12", desc: "Board + competitive integrated program.", icon: GraduationCap, color: "from-primary to-secondary" },
+  { title: "Class 9 & 10", desc: "Build the early edge — concepts that last.", icon: BookOpen, color: "from-secondary to-primary" },
+  { title: "Foundation Olympiad", desc: "NTSE, KVPY, science olympiads.", icon: FlaskConical, color: "from-primary to-primary/40" },
+  { title: "Crash Courses", desc: "Last-mile revision for droppers.", icon: Brain, color: "from-secondary to-secondary/40" },
 ];
 
 export function Courses() {
@@ -32,11 +32,10 @@ export function Courses() {
               <div className="absolute inset-0 bg-gradient-gold opacity-0 group-hover:opacity-15 blur-2xl rounded-3xl transition-opacity" />
               <div className="relative h-full bg-card rounded-3xl p-7 shadow-soft overflow-hidden border border-border">
                 <div className={`absolute -top-12 -right-12 w-40 h-40 rounded-full bg-gradient-to-br ${c.color} opacity-15 blur-2xl`} />
-                <div className="flex items-start justify-between mb-6">
+                <div className="flex items-start mb-6">
                   <div className="w-14 h-14 rounded-2xl bg-primary flex items-center justify-center shadow-glow-navy">
                     <c.icon className="w-7 h-7 text-secondary" />
                   </div>
-                  <span className="text-[10px] tracking-[0.2em] uppercase bg-primary/5 text-primary border border-primary/15 px-3 py-1 rounded-full font-semibold">{c.tag}</span>
                 </div>
                 <h3 className="text-2xl font-display font-semibold text-primary">{c.title}</h3>
                 <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{c.desc}</p>
