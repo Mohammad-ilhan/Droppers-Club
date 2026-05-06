@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import {
-  ShieldCheck, Users, BookOpen, Target, Award, Clock,
-  ClipboardCheck, HeartHandshake, Wifi, Building2, Microscope, Bus,
+  Users, BookOpen, Target, Award,
+  ClipboardCheck, HeartHandshake,
 } from "lucide-react";
 
 const pillars = [
