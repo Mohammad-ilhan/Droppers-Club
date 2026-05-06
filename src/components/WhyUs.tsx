@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import {
-  ShieldCheck, Users, BookOpen, Target, Award, Clock,
-  ClipboardCheck, HeartHandshake, Wifi, Building2, Microscope, Bus,
+  Users, BookOpen, Target, Award,
+  ClipboardCheck, HeartHandshake,
 } from "lucide-react";
 
 const pillars = [
@@ -13,16 +13,6 @@ const pillars = [
   { icon: Award, title: "Result-First Culture", desc: "Toppers' wall, scholarship rewards, and a winning peer environment." },
 ];
 
-const facilities = [
-  { icon: Building2, label: "AC Smart Classrooms" },
-  { icon: Microscope, label: "Bio & Chem Lab Demos" },
-  { icon: BookOpen, label: "Silent Library" },
-  { icon: Wifi, label: "High-Speed Wi-Fi Campus" },
-  { icon: ShieldCheck, label: "CCTV-Monitored Premises" },
-  { icon: Bus, label: "Transport Assistance" },
-  { icon: Clock, label: "Long Study Hours" },
-  { icon: HeartHandshake, label: "Hostel & Mess Tie-ups" },
-];
 
 const journey = [
   { step: "01", title: "Counselling", desc: "Career mapping with mentor & parent." },
@@ -71,31 +61,6 @@ export function WhyUs() {
             </motion.div>
           ))}
         </div>
-
-        {/* Facilities strip */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="relative rounded-[2rem] bg-primary text-primary-foreground p-8 md:p-12 shadow-3d overflow-hidden mb-20"
-        >
-          <div className="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-secondary/20 blur-3xl" />
-          <div className="absolute -bottom-24 -left-24 w-80 h-80 rounded-full bg-secondary/15 blur-3xl" />
-          <div className="relative">
-            <p className="text-[10px] tracking-[0.4em] uppercase text-secondary">Campus Facilities</p>
-            <h3 className="text-3xl md:text-4xl font-display font-semibold mt-2">Built for serious aspirants.</h3>
-            <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-5">
-              {facilities.map((f) => (
-                <div key={f.label} className="flex items-center gap-3 group">
-                  <div className="w-10 h-10 rounded-xl bg-primary-foreground/10 border border-primary-foreground/15 flex items-center justify-center group-hover:bg-secondary group-hover:text-primary transition-colors">
-                    <f.icon className="w-5 h-5" />
-                  </div>
-                  <span className="text-sm font-medium">{f.label}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </motion.div>
 
         {/* Journey timeline */}
         <div>

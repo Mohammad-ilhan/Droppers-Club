@@ -8,7 +8,7 @@ const links = [
   { href: "#courses", label: "Courses" },
   { href: "#why-us", label: "Why Us" },
   { href: "#faculty", label: "Faculty" },
-  { href: "#gallery", label: "Campus" },
+  { href: "#gallery", label: "Gallery" },
   { href: "#results", label: "Results" },
   { href: "#testimonials", label: "Testimonials" },
   { href: "#contact", label: "Contact" },
