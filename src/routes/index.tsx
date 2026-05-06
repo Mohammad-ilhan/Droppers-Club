@@ -7,6 +7,7 @@ import { Courses } from "@/components/Courses";
 import { WhyUs } from "@/components/WhyUs";
 import { Gallery } from "@/components/Gallery";
 import { Faculty } from "@/components/Faculty";
+import { Resources } from "@/components/Resources";
 import { Results } from "@/components/Results";
 import { Testimonials } from "@/components/Testimonials";
 import { Reviews } from "@/components/Reviews";
@@ -41,6 +42,7 @@ function Home() {
         <WhyUs />
         <Faculty />
         <Gallery />
+        <Resources />
         <Results />
         <Testimonials />
         <Reviews />
