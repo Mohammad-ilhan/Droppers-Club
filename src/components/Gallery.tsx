@@ -23,12 +23,12 @@ export function Gallery() {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <p className="text-xs tracking-[0.3em] text-secondary uppercase">A Walk Through Our Campus</p>
+          <p className="text-xs tracking-[0.3em] text-secondary uppercase">A Look Inside Our Classes</p>
           <h2 className="text-4xl md:text-6xl font-display font-semibold mt-3 text-primary">
             Inside <span className="italic text-gradient-gold">Dropper's Club</span>
           </h2>
           <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-            Every corner crafted for focus, every space built for results. Take a visual tour of the place where toppers are made.
+            Every corner crafted for focus, every space built for results. A visual look at the place where toppers are made.
           </p>
         </motion.div>
 
