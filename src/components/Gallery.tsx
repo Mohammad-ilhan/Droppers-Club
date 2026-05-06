@@ -2,14 +2,13 @@ import { motion } from "framer-motion";
 import { Camera } from "lucide-react";
 
 const items = [
-  { label: "Smart Classroom", emoji: "🏫", span: "md:col-span-2 md:row-span-2", h: "h-full min-h-[320px]" },
-  { label: "Library & Reading Hall", emoji: "📚", span: "", h: "h-56" },
-  { label: "Doubt Clearing Zone", emoji: "💡", span: "", h: "h-56" },
-  { label: "Chemistry Lab", emoji: "⚗️", span: "", h: "h-56" },
-  { label: "Test Hall", emoji: "📝", span: "md:col-span-2", h: "h-56" },
-  { label: "Mentorship Cabin", emoji: "🤝", span: "", h: "h-56" },
-  { label: "Hostel & Mess", emoji: "🛏️", span: "", h: "h-56" },
-  { label: "Award Ceremony", emoji: "🏆", span: "md:col-span-2", h: "h-56" },
+  { label: "Classroom", emoji: "🏫", span: "md:col-span-2 md:row-span-2", h: "h-full min-h-[320px]" },
+  { label: "Reading Area", emoji: "📚", span: "", h: "h-56" },
+  { label: "Doubt Clearing Desk", emoji: "💡", span: "", h: "h-56" },
+  { label: "Test & Practice Hall", emoji: "📝", span: "md:col-span-2", h: "h-56" },
+  { label: "Mentorship Corner", emoji: "🤝", span: "", h: "h-56" },
+  { label: "Toppers' Wall", emoji: "🏆", span: "", h: "h-56" },
+  { label: "Felicitation Moments", emoji: "🎓", span: "md:col-span-2", h: "h-56" },
 ];
 
 export function Gallery() {
