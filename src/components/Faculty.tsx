@@ -64,9 +64,6 @@ export function Faculty() {
                 <div className="text-[10px] tracking-[0.25em] uppercase text-secondary font-semibold">{f.subject}</div>
                 <div className="text-lg font-bold mt-1 truncate">{f.name}</div>
                 <div className="text-sm text-muted-foreground mt-1.5 leading-snug">{f.qual}</div>
-                <div className="mt-3 inline-flex items-center gap-1.5 text-[11px] font-semibold text-primary">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary" /> Verified Mentor
-                </div>
               </div>
             </motion.div>
           ))}
