@@ -36,7 +36,7 @@ export function Hero() {
             </p>
           </div>
           <p className="mt-4 text-base text-muted-foreground max-w-xl leading-relaxed">
-            Personal mentorship, IIT &amp; AIIMS faculty, and a winning culture — all under one roof.
+            Personal mentorship, experienced &amp; dedicated teachers, and a winning study culture — all under one roof.
           </p>
 
           <div className="mt-9 flex flex-wrap gap-4">
