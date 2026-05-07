@@ -50,9 +50,9 @@ export function Resources() {
                 </div>
               </div>
               <div className="mt-5 flex items-center justify-between pt-4 border-t border-border">
-                <span className="text-[10px] tracking-[0.25em] uppercase text-muted-foreground">Sample Preview</span>
+                <span className="text-[10px] tracking-[0.25em] uppercase text-muted-foreground">Free Sample</span>
                 <button className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-primary group-hover:gap-2.5 transition-all">
-                  <Download className="w-4 h-4" /> Request
+                  <Download className="w-4 h-4" /> Download
                 </button>
               </div>
             </motion.div>
@@ -60,7 +60,7 @@ export function Resources() {
         </div>
 
         <p className="mt-10 text-center text-xs sm:text-sm text-muted-foreground">
-          Full study material is shared with enrolled students. Contact us for sample copies.
+          These are free demo samples of our notes &amp; sheets. Contact us for more sample copies — full study material is provided to enrolled students.
         </p>
       </div>
     </section>
