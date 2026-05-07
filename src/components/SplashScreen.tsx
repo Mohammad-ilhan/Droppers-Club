@@ -80,7 +80,7 @@ export function SplashScreen() {
               transition={{ delay: 1.8, duration: 0.7 }}
               className="mt-5 text-[10px] md:text-xs tracking-[0.6em] uppercase text-primary-foreground mix-blend-difference"
             >
-              Est · Bhopal · Crafting Toppers
+              Since 2019 · Bhopal · Crafting Toppers
             </motion.p>
           </div>
         </motion.div>

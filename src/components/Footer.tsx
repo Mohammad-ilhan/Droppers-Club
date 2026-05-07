@@ -15,7 +15,9 @@ export function Footer() {
           </div>
           <p className="text-sm text-muted-foreground mt-4">Bhopal's best coaching for NEET, JEE & foundation — guiding serious students to top ranks with discipline, mentorship, and proven results.</p>
           <a
-            href="#"
+            href="https://play.google.com/store/apps/details?id=co.hodor.dvzeq"
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-5 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-primary-foreground text-xs font-semibold hover:bg-primary/90 transition-all shadow-soft"
           >
             <Smartphone className="w-4 h-4" />
