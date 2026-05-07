@@ -20,9 +20,9 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Dropper's Club — Bhopal's Premier NEET & JEE Coaching" },
-      { name: "description", content: "Crafting toppers for NEET, JEE Mains/Advanced & foundation classes (9–12). IIT/AIIMS faculty, proven results, Kolar Road, Bhopal." },
+      { name: "description", content: "Bhopal's best coaching for NEET, JEE & foundation classes (9–12). Expert IIT/AIIMS faculty, personal mentorship, and a proven track record of toppers." },
       { property: "og:title", content: "Dropper's Club — Crafting Toppers" },
-      { property: "og:description", content: "Bhopal's premier coaching for NEET, JEE & foundation batches." },
+      { property: "og:description", content: "Bhopal's best coaching for NEET, JEE & foundation — where serious students become top rankers." },
     ],
   }),
   component: Home,

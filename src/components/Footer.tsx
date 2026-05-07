@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Instagram, Youtube, Facebook } from "lucide-react";
+import { MapPin, Phone, Mail, Instagram, Youtube, Facebook, Smartphone } from "lucide-react";
 import logo from "@/assets/logo.jpeg";
 
 export function Footer() {
@@ -13,7 +13,14 @@ export function Footer() {
               <div className="text-[10px] tracking-widest text-muted-foreground uppercase">Crafting Toppers</div>
             </div>
           </div>
-          <p className="text-sm text-muted-foreground mt-4">Bhopal's premier coaching for NEET, JEE & foundation batches.</p>
+          <p className="text-sm text-muted-foreground mt-4">Bhopal's best coaching for NEET, JEE & foundation — guiding serious students to top ranks with discipline, mentorship, and proven results.</p>
+          <a
+            href="#"
+            className="mt-5 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-primary-foreground text-xs font-semibold hover:bg-primary/90 transition-all shadow-soft"
+          >
+            <Smartphone className="w-4 h-4" />
+            Get the App
+          </a>
           <div className="flex gap-3 mt-5">
             {[Instagram, Youtube, Facebook].map((I, i) => (
               <a key={i} href="#" className="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-gradient-brand transition-all">

@@ -18,7 +18,7 @@ export function Hero() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 border border-primary/15 text-xs font-medium mb-6">
             <Star className="w-3.5 h-3.5 text-secondary fill-secondary" />
-            <span className="text-primary tracking-wide">Bhopal's Premier NEET & JEE Institute</span>
+            <span className="text-primary tracking-wide">Bhopal's Most Trusted Coaching for NEET, JEE & Foundation</span>
           </div>
 
           <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-[5.5rem] font-semibold leading-[1.02] sm:leading-[0.98] text-primary">
