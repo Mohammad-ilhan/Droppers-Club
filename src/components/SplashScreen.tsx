@@ -3,8 +3,10 @@ import { useEffect, useState } from "react";
 import { Monogram } from "./Monogram";
 
 export function SplashScreen() {
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
   useEffect(() => {
+    if (window.innerWidth < 768) return;
+    setShow(true);
     const t = setTimeout(() => setShow(false), 3400);
     return () => clearTimeout(t);
   }, []);

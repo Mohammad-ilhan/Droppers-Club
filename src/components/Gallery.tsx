@@ -2,36 +2,36 @@ import { motion } from "framer-motion";
 import { Camera } from "lucide-react";
 
 const items = [
-  { label: "Classroom", emoji: "🏫", span: "md:col-span-2 md:row-span-2", h: "h-full min-h-[320px]" },
-  { label: "Reading Area", emoji: "📚", span: "", h: "h-56" },
-  { label: "Doubt Clearing Desk", emoji: "💡", span: "", h: "h-56" },
-  { label: "Test & Practice Hall", emoji: "📝", span: "md:col-span-2", h: "h-56" },
-  { label: "Mentorship Corner", emoji: "🤝", span: "", h: "h-56" },
-  { label: "Toppers' Wall", emoji: "🏆", span: "", h: "h-56" },
-  { label: "Felicitation Moments", emoji: "🎓", span: "md:col-span-2", h: "h-56" },
+  { label: "Classroom", emoji: "🏫", span: "md:col-span-2 md:row-span-2", h: "h-32 sm:h-full sm:min-h-[320px]" },
+  { label: "Reading Area", emoji: "📚", span: "", h: "h-32 sm:h-56" },
+  { label: "Doubt Clearing Desk", emoji: "💡", span: "", h: "h-32 sm:h-56" },
+  { label: "Test & Practice Hall", emoji: "📝", span: "md:col-span-2", h: "h-32 sm:h-56" },
+  { label: "Mentorship Corner", emoji: "🤝", span: "", h: "h-32 sm:h-56" },
+  { label: "Toppers' Wall", emoji: "🏆", span: "", h: "h-32 sm:h-56" },
+  { label: "Felicitation Moments", emoji: "🎓", span: "md:col-span-2", h: "h-32 sm:h-56" },
 ];
 
 export function Gallery() {
   return (
-    <section id="gallery" className="relative py-16 sm:py-20 lg:py-28 px-4 sm:px-6 bg-gradient-hero">
+    <section id="gallery" className="relative py-10 sm:py-20 lg:py-28 px-4 sm:px-6 bg-gradient-hero">
       <div className="absolute inset-0 grid-bg opacity-30" />
       <div className="relative max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-10 sm:mb-14"
+          className="text-center mb-7 sm:mb-14"
         >
           <p className="text-xs tracking-[0.3em] text-secondary uppercase">A Look Inside Our Classes</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-semibold mt-3 text-primary">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-semibold mt-2 sm:mt-3 text-primary">
             Inside <span className="italic text-gradient-gold">Dropper's Club</span>
           </h2>
-          <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
+          <p className="mt-3 sm:mt-4 text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
             Every corner crafted for focus, every space built for results. A visual look at the place where toppers are made.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-5 auto-rows-min">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5 auto-rows-min">
           {items.map((it, i) => (
             <motion.figure
               key={it.label}
@@ -44,10 +44,10 @@ export function Gallery() {
               <div className={`relative ${it.h} bg-gradient-to-br from-primary/8 via-card to-secondary/15 flex items-center justify-center`}>
                 <div className="absolute inset-0 dot-bg opacity-40" />
                 <div className="relative text-center">
-                  <div className="text-5xl mb-2 transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-3">
+                  <div className="text-3xl sm:text-5xl mb-1 sm:mb-2 transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-3">
                     {it.emoji}
                   </div>
-                  <div className="text-[10px] tracking-[0.3em] uppercase text-muted-foreground">Photo Reserved</div>
+                  <div className="text-[9px] sm:text-[10px] tracking-[0.2em] sm:tracking-[0.3em] uppercase text-muted-foreground">{it.label}</div>
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
