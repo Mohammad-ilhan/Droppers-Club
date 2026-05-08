@@ -9,37 +9,37 @@ export function Hero() {
       <div className="absolute -top-40 -right-40 w-[28rem] h-[28rem] rounded-full bg-secondary/20 blur-3xl" />
       <div className="absolute -bottom-40 -left-40 w-[28rem] h-[28rem] rounded-full bg-primary/15 blur-3xl" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 pt-12 sm:pt-16 lg:pt-20 pb-16 sm:pb-24 lg:pb-32 grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 pt-8 sm:pt-16 lg:pt-20 pb-10 sm:pb-24 lg:pb-32 grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="lg:col-span-7"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 border border-primary/15 text-xs font-medium mb-6">
+          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-primary/5 border border-primary/15 text-[10px] sm:text-xs font-medium mb-4 sm:mb-6">
             <Star className="w-3.5 h-3.5 text-secondary fill-secondary" />
             <span className="text-primary tracking-wide">Bhopal's Most Trusted Coaching for NEET, JEE & Foundation</span>
           </div>
 
-          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-[5.5rem] font-semibold leading-[1.02] sm:leading-[0.98] text-primary">
+          <h1 className="font-display text-3xl sm:text-5xl md:text-6xl lg:text-[5.5rem] font-semibold leading-[1.05] sm:leading-[0.98] text-primary">
             Where <span className="italic font-normal text-gradient-gold">droppers</span><br />
             become <span className="italic font-normal" style={{ fontFamily: "var(--font-script)" }}>toppers.</span>
           </h1>
 
-          <div className="mt-7 flex items-start gap-3 max-w-xl">
+          <div className="mt-5 sm:mt-7 flex items-start gap-3 max-w-xl">
             <Quote className="w-5 h-5 text-secondary shrink-0 mt-1" />
             <p
-              className="text-xl sm:text-2xl md:text-[1.7rem] leading-snug text-primary"
+              className="text-lg sm:text-2xl md:text-[1.7rem] leading-snug text-primary"
               style={{ fontFamily: "var(--font-script)" }}
             >
               The connecting link between Students &amp; Success.
             </p>
           </div>
-          <p className="mt-4 text-base text-muted-foreground max-w-xl leading-relaxed">
+          <p className="mt-3 sm:mt-4 text-sm sm:text-base text-muted-foreground max-w-xl leading-relaxed">
             Personal mentorship, experienced &amp; dedicated teachers, and a winning study culture — all under one roof.
           </p>
 
-          <div className="mt-9 flex flex-wrap gap-4">
+          <div className="mt-6 sm:mt-9 flex flex-wrap gap-3 sm:gap-4">
             <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-full px-7 shadow-glow-navy">
               <a href="#register">Book Free Demo <ArrowRight className="ml-2 w-4 h-4" /></a>
             </Button>
@@ -48,7 +48,7 @@ export function Hero() {
             </Button>
           </div>
 
-          <div className="mt-10 sm:mt-14 grid grid-cols-3 gap-3 sm:gap-6 max-w-md">
+          <div className="mt-7 sm:mt-14 grid grid-cols-3 gap-2.5 sm:gap-6 max-w-md">
             {[
               { n: "1200+", l: "Selections", i: Trophy },
               { n: "25+", l: "Expert Faculty", i: Users },
@@ -67,7 +67,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 30, scale: 0.96 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.9, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="lg:col-span-5"
+          className="hidden lg:block lg:col-span-5"
         >
           <div className="relative lift">
             {/* Soft gold halo */}
