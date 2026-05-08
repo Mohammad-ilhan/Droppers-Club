@@ -28,7 +28,7 @@ export function WhyUs() {
     <section id="why-us" className="relative py-10 sm:py-20 lg:py-28 px-4 sm:px-6 bg-muted/40 border-y border-border/50">
       <div className="max-w-7xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-7 sm:mb-14 lg:mb-16"
@@ -47,7 +47,7 @@ export function WhyUs() {
           {pillars.map((p, i) => (
             <motion.div
               key={p.title}
-              initial={{ opacity: 0, y: 30 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
@@ -74,7 +74,7 @@ export function WhyUs() {
             {journey.map((j, i) => (
               <motion.div
                 key={j.step}
-                initial={{ opacity: 0, x: -20 }}
+                initial={false}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.06 }}

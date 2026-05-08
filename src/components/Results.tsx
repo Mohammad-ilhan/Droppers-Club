@@ -25,7 +25,7 @@ export function Results() {
       <div className="absolute inset-0 dot-bg opacity-30" />
       <div className="relative max-w-7xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-7 sm:mb-14"
@@ -44,7 +44,7 @@ export function Results() {
           {metrics.map((m, i) => (
             <motion.div
               key={m.l}
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.06 }}
@@ -64,7 +64,7 @@ export function Results() {
           {toppers.map((t, i) => (
             <motion.article
               key={t.name}
-              initial={{ opacity: 0, y: 30 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ delay: (i % 4) * 0.06 }}

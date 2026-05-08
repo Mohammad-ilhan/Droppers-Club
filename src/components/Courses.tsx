@@ -14,7 +14,7 @@ export function Courses() {
   return (
     <section id="courses" className="relative py-10 sm:py-20 lg:py-28 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-7 sm:mb-14 lg:mb-16">
+        <motion.div initial={false} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-7 sm:mb-14 lg:mb-16">
           <p className="text-xs tracking-[0.3em] text-secondary uppercase">Explore Programs</p>
           <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-2 sm:mt-3">Courses That <span className="text-gradient-brand">Shape Futures</span></h2>
         </motion.div>
@@ -23,7 +23,7 @@ export function Courses() {
           {courses.map((c, i) => (
             <motion.div
               key={c.title}
-              initial={{ opacity: 0, y: 40 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08 }}
