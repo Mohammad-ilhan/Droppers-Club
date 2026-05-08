@@ -14,9 +14,9 @@ export function Faculty() {
     <section id="faculty" className="relative py-16 sm:py-20 lg:py-28 px-4 sm:px-6 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-muted/40 to-transparent" />
       <div className="relative max-w-7xl mx-auto">
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-10 sm:mb-14 lg:mb-16">
           <p className="text-xs tracking-[0.3em] text-secondary uppercase">Meet the Mentors</p>
-          <h2 className="text-4xl md:text-6xl font-bold mt-3">Faculty That <span className="text-gradient-brand">Make Toppers</span></h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-3">Faculty That <span className="text-gradient-brand">Make Toppers</span></h2>
           <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">A handpicked team from IITs, AIIMS and India's premier institutions — committed to one mission: your success.</p>
         </motion.div>
 

@@ -31,10 +31,10 @@ export function WhyUs() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-14 lg:mb-16"
         >
           <p className="text-xs tracking-[0.3em] text-secondary uppercase">Everything You Need · One Roof</p>
-          <h2 className="text-4xl md:text-6xl font-display font-semibold mt-3 text-primary">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-semibold mt-3 text-primary">
             Why Parents <span className="italic text-gradient-gold">Choose Us</span>
           </h2>
           <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">

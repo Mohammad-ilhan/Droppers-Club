@@ -21,7 +21,7 @@ export function Resources() {
           className="text-center mb-12 md:mb-16"
         >
           <p className="text-[10px] sm:text-xs tracking-[0.3em] text-secondary uppercase">Study Material</p>
-          <h2 className="text-3xl sm:text-4xl md:text-6xl font-display font-semibold mt-3 text-primary">
+          <h2 className="text-3xl sm:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-semibold mt-3 text-primary">
             Notes, PDFs & <span className="italic text-gradient-gold">Practice Sheets</span>
           </h2>
           <p className="mt-4 text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">

@@ -11,9 +11,9 @@ export function Results() {
   return (
     <section id="results" className="py-16 sm:py-20 lg:py-28 px-4 sm:px-6 overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-10 sm:mb-14 lg:mb-16">
           <p className="text-xs tracking-[0.3em] text-secondary uppercase">Hall of Fame</p>
-          <h2 className="text-4xl md:text-6xl font-bold mt-3">Our <span className="text-gradient-brand">Champions</span></h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-3">Our <span className="text-gradient-brand">Champions</span></h2>
         </motion.div>
       </div>
       <div className="relative">
