@@ -64,13 +64,13 @@ export function WhyUs() {
 
         {/* Journey timeline */}
         <div>
-          <div className="text-center mb-10">
+          <div className="text-center mb-6 sm:mb-10">
             <p className="text-xs tracking-[0.3em] text-secondary uppercase">Student Journey</p>
-            <h3 className="text-3xl md:text-4xl font-display font-semibold mt-2 text-primary">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-display font-semibold mt-2 text-primary">
               From day one to <span className="italic text-gradient-gold">selection day</span>.
             </h3>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5">
             {journey.map((j, i) => (
               <motion.div
                 key={j.step}
@@ -78,13 +78,13 @@ export function WhyUs() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.06 }}
-                className="relative lift bg-card border border-border rounded-3xl p-6 shadow-soft"
+                className="relative lift bg-card border border-border rounded-2xl sm:rounded-3xl p-3.5 sm:p-6 shadow-soft overflow-hidden"
               >
-                <div className="absolute top-5 right-5 font-display text-5xl font-semibold text-secondary/30">
+                <div className="absolute top-3 right-3 sm:top-5 sm:right-5 font-display text-3xl sm:text-5xl font-semibold text-secondary/25 sm:text-secondary/30">
                   {j.step}
                 </div>
-                <h4 className="text-lg font-display font-semibold text-primary">{j.title}</h4>
-                <p className="text-sm text-muted-foreground mt-2 leading-relaxed pr-12">{j.desc}</p>
+                <h4 className="text-sm sm:text-lg font-display font-semibold text-primary leading-tight pr-8 sm:pr-12">{j.title}</h4>
+                <p className="text-[11px] sm:text-sm text-muted-foreground mt-1.5 sm:mt-2 leading-snug sm:leading-relaxed pr-4 sm:pr-12">{j.desc}</p>
               </motion.div>
             ))}
           </div>
