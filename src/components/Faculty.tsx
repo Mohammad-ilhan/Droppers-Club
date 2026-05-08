@@ -11,7 +11,7 @@ const faculty = [
 
 export function Faculty() {
   return (
-    <section id="faculty" className="relative py-28 px-6 overflow-hidden">
+    <section id="faculty" className="relative py-16 sm:py-20 lg:py-28 px-4 sm:px-6 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-muted/40 to-transparent" />
       <div className="relative max-w-7xl mx-auto">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">

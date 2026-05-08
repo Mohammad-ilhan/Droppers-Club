@@ -13,7 +13,7 @@ const items = [
 
 export function Gallery() {
   return (
-    <section id="gallery" className="relative py-28 px-6 bg-gradient-hero">
+    <section id="gallery" className="relative py-16 sm:py-20 lg:py-28 px-4 sm:px-6 bg-gradient-hero">
       <div className="absolute inset-0 grid-bg opacity-30" />
       <div className="relative max-w-7xl mx-auto">
         <motion.div

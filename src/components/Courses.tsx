@@ -12,7 +12,7 @@ const courses = [
 
 export function Courses() {
   return (
-    <section id="courses" className="relative py-28 px-6">
+    <section id="courses" className="relative py-16 sm:py-20 lg:py-28 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
           <p className="text-xs tracking-[0.3em] text-secondary uppercase">Explore Programs</p>

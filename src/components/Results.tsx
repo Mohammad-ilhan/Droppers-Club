@@ -9,7 +9,7 @@ const results = Array.from({ length: 8 }).map((_, i) => ({
 export function Results() {
   const all = [...results, ...results];
   return (
-    <section id="results" className="py-28 px-6 overflow-hidden">
+    <section id="results" className="py-16 sm:py-20 lg:py-28 px-4 sm:px-6 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
           <p className="text-xs tracking-[0.3em] text-secondary uppercase">Hall of Fame</p>

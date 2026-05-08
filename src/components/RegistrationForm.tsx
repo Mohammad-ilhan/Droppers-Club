@@ -8,7 +8,7 @@ import { Sparkles } from "lucide-react";
 
 export function RegistrationForm() {
   return (
-    <section id="register" className="py-28 px-6 relative overflow-hidden">
+    <section id="register" className="py-16 sm:py-20 lg:py-28 px-4 sm:px-6 relative overflow-hidden">
       <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-primary/15 blur-3xl" />
       <div className="relative max-w-4xl mx-auto">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
