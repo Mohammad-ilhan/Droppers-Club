@@ -14,16 +14,16 @@ export function Reviews() {
   ];
 
   return (
-    <section className="py-16 sm:py-20 lg:py-28 px-4 sm:px-6 bg-muted/40 border-y border-border/50">
+    <section className="py-10 sm:py-20 lg:py-28 px-4 sm:px-6 bg-muted/40 border-y border-border/50">
       <div className="max-w-7xl mx-auto">
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-10 sm:mb-14 lg:mb-16">
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-7 sm:mb-14 lg:mb-16">
           <p className="text-xs tracking-[0.3em] text-secondary uppercase">Student Reviews</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-3">Hear it from <span className="text-gradient-brand">Students</span></h2>
+          <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-2 sm:mt-3">Hear it from <span className="text-gradient-brand">Students</span></h2>
         </motion.div>
 
-        <div className="mb-12">
-          <h3 className="text-sm uppercase tracking-widest text-muted-foreground mb-6 flex items-center gap-2"><Play className="w-4 h-4" /> Video Reviews</h3>
-          <div className="grid md:grid-cols-3 gap-5">
+        <div className="mb-8 sm:mb-12">
+          <h3 className="text-xs sm:text-sm uppercase tracking-widest text-muted-foreground mb-4 sm:mb-6 flex items-center gap-2"><Play className="w-4 h-4" /> Video Reviews</h3>
+          <div className="grid grid-cols-3 gap-3 sm:gap-5">
             {videos.map((v, i) => (
               <motion.div
                 key={i}
@@ -32,18 +32,18 @@ export function Reviews() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 whileHover={{ y: -6 }}
-                className="group relative aspect-video rounded-2xl glass shadow-3d overflow-hidden cursor-pointer"
+                className="group relative aspect-square sm:aspect-video rounded-2xl glass shadow-3d overflow-hidden cursor-pointer"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center text-6xl">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center text-2xl sm:text-6xl">
                   {v.thumb}
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-16 h-16 rounded-full bg-gradient-brand flex items-center justify-center shadow-glow-orange group-hover:scale-110 transition-transform">
-                    <Play className="w-6 h-6 text-primary-foreground fill-primary-foreground ml-1" />
+                  <div className="w-9 h-9 sm:w-16 sm:h-16 rounded-full bg-gradient-brand flex items-center justify-center shadow-glow-orange group-hover:scale-110 transition-transform">
+                    <Play className="w-4 h-4 sm:w-6 sm:h-6 text-primary-foreground fill-primary-foreground ml-0.5 sm:ml-1" />
                   </div>
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background to-transparent">
-                  <div className="text-sm font-semibold">{v.name}</div>
+                <div className="absolute bottom-0 left-0 right-0 p-2 sm:p-4 bg-gradient-to-t from-background to-transparent">
+                  <div className="text-[10px] sm:text-sm font-semibold leading-tight">{v.name}</div>
                 </div>
               </motion.div>
             ))}
@@ -51,8 +51,8 @@ export function Reviews() {
         </div>
 
         <div>
-          <h3 className="text-sm uppercase tracking-widest text-muted-foreground mb-6 flex items-center gap-2"><MessageSquare className="w-4 h-4" /> Written Reviews</h3>
-          <div className="grid md:grid-cols-3 gap-5">
+          <h3 className="text-xs sm:text-sm uppercase tracking-widest text-muted-foreground mb-4 sm:mb-6 flex items-center gap-2"><MessageSquare className="w-4 h-4" /> Written Reviews</h3>
+          <div className="grid gap-3 sm:grid-cols-3 sm:gap-5">
             {text.map((r, i) => (
               <motion.div
                 key={i}
@@ -60,7 +60,7 @@ export function Reviews() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="glass rounded-2xl p-6 shadow-3d"
+                className="glass rounded-2xl p-4 sm:p-6 shadow-3d"
               >
                 <p className="text-sm leading-relaxed">"{r.text}"</p>
                 <div className="mt-4 text-xs font-semibold text-secondary">— {r.name}</div>
