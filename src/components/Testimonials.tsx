@@ -84,7 +84,23 @@ export function Testimonials() {
           </p>
         </motion.div>
 
-        <div className="flex justify-center gap-6 mt-12 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[740px] overflow-hidden">
+        {/* Mobile: clean static grid (no infinite scroll). Desktop: animated columns. */}
+        <div className="md:hidden mt-10 grid grid-cols-1 gap-4">
+          {testimonials.slice(0, 5).map((t, i) => (
+            <div key={i} className="p-6 rounded-3xl border border-border shadow-soft bg-card">
+              <div className="text-sm leading-relaxed text-foreground">{t.text}</div>
+              <div className="flex items-center gap-3 mt-4">
+                <img width={40} height={40} src={t.image} alt={t.name} className="h-10 w-10 rounded-full object-cover" />
+                <div className="flex flex-col">
+                  <div className="font-semibold tracking-tight leading-5 text-primary">{t.name}</div>
+                  <div className="leading-5 text-xs tracking-tight text-secondary">{t.role}</div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="hidden md:flex justify-center gap-6 mt-12 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[740px] overflow-hidden">
           <TestimonialsColumn testimonials={firstColumn} duration={15} />
           <TestimonialsColumn testimonials={secondColumn} className="hidden md:block" duration={19} />
           <TestimonialsColumn testimonials={thirdColumn} className="hidden lg:block" duration={17} />
