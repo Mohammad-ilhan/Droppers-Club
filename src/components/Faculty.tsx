@@ -28,16 +28,16 @@ export function Faculty() {
           transition={{ duration: 0.8 }}
           className="relative mb-10 sm:mb-20"
         >
-          <div className="absolute -inset-6 bg-gradient-brand opacity-15 blur-3xl rounded-[3rem]" />
-          <div className="relative glass rounded-[2.5rem] p-4 md:p-6 shadow-3d">
-            <div className="aspect-[16/8] rounded-3xl bg-gradient-to-br from-primary/10 to-secondary/10 border border-border flex items-center justify-center">
-              <div className="text-center p-8">
-                <div className="text-6xl mb-3">👥</div>
-                <p className="text-lg font-semibold">[ Group Photo of All Faculty ]</p>
-                <p className="text-sm text-muted-foreground mt-2">Reserved space — coaching to provide group photo</p>
+          <div className="absolute -inset-3 sm:-inset-6 bg-gradient-brand opacity-15 blur-3xl rounded-[2rem] sm:rounded-[3rem]" />
+          <div className="relative glass rounded-3xl sm:rounded-[2.5rem] p-3 md:p-6 shadow-3d">
+            <div className="aspect-[16/7] sm:aspect-[16/8] rounded-2xl sm:rounded-3xl bg-gradient-to-br from-primary/10 to-secondary/10 border border-border flex items-center justify-center">
+              <div className="text-center p-4 sm:p-8">
+                <div className="text-3xl sm:text-6xl mb-1 sm:mb-3">👥</div>
+                <p className="text-sm sm:text-lg font-semibold">Faculty Team</p>
+                <p className="text-[11px] sm:text-sm text-muted-foreground mt-1 sm:mt-2">Experienced subject mentors</p>
               </div>
             </div>
-            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 px-6 py-2 rounded-full bg-gradient-brand text-primary-foreground text-xs font-bold tracking-widest uppercase shadow-glow-orange">
+            <div className="absolute -bottom-3 sm:-bottom-4 left-1/2 -translate-x-1/2 px-4 sm:px-6 py-1.5 sm:py-2 rounded-full bg-gradient-brand text-primary-foreground text-[10px] sm:text-xs font-bold tracking-widest uppercase shadow-glow-orange whitespace-nowrap">
               The Dream Team
             </div>
           </div>
