@@ -8,13 +8,13 @@ import { Sparkles } from "lucide-react";
 
 export function RegistrationForm() {
   return (
-    <section id="register" className="py-16 sm:py-20 lg:py-28 px-4 sm:px-6 relative overflow-hidden">
+    <section id="register" className="py-10 sm:py-20 lg:py-28 px-4 sm:px-6 relative overflow-hidden">
       <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-primary/15 blur-3xl" />
       <div className="relative max-w-4xl mx-auto">
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-8 sm:mb-12">
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-6 sm:mb-12">
           <p className="text-xs tracking-[0.3em] text-secondary uppercase">Join Us</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-3">Start Your <span className="text-gradient-brand">Topper Journey</span></h2>
-          <p className="mt-4 text-muted-foreground">Fill in your details — our team will reach out within 24 hours.</p>
+          <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-2 sm:mt-3">Start Your <span className="text-gradient-brand">Topper Journey</span></h2>
+          <p className="mt-3 sm:mt-4 text-sm sm:text-base text-muted-foreground">Fill in your details — our team will reach out within 24 hours.</p>
         </motion.div>
 
         <motion.form
@@ -22,29 +22,29 @@ export function RegistrationForm() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           onSubmit={(e) => { e.preventDefault(); toast.success("Registration received! We'll contact you soon."); (e.target as HTMLFormElement).reset(); }}
-          className="glass rounded-3xl p-8 md:p-10 shadow-3d space-y-6"
+          className="glass rounded-2xl sm:rounded-3xl p-4 sm:p-8 md:p-10 shadow-3d space-y-5 sm:space-y-6"
         >
-          <div className="grid md:grid-cols-2 gap-5">
+          <div className="grid grid-cols-2 md:grid-cols-2 gap-3 sm:gap-5">
             <div className="space-y-2">
               <Label>Full Name</Label>
-              <Input required placeholder="Your name" className="bg-background/40 h-12" />
+              <Input required placeholder="Your name" className="bg-background/40 h-11 sm:h-12" />
             </div>
             <div className="space-y-2">
               <Label>Phone</Label>
-              <Input required type="tel" placeholder="+91" className="bg-background/40 h-12" />
+              <Input required type="tel" placeholder="+91" className="bg-background/40 h-11 sm:h-12" />
             </div>
             <div className="space-y-2">
               <Label>Email</Label>
-              <Input required type="email" placeholder="you@email.com" className="bg-background/40 h-12" />
+              <Input required type="email" placeholder="you@email.com" className="bg-background/40 h-11 sm:h-12" />
             </div>
             <div className="space-y-2">
               <Label>City</Label>
-              <Input placeholder="Bhopal" className="bg-background/40 h-12" />
+              <Input placeholder="Bhopal" className="bg-background/40 h-11 sm:h-12" />
             </div>
             <div className="space-y-2">
               <Label>Class / Target</Label>
               <Select>
-                <SelectTrigger className="bg-background/40 h-12"><SelectValue placeholder="Select" /></SelectTrigger>
+                <SelectTrigger className="bg-background/40 h-11 sm:h-12"><SelectValue placeholder="Select" /></SelectTrigger>
                 <SelectContent>
                   <SelectItem value="9">Class 9</SelectItem>
                   <SelectItem value="10">Class 10</SelectItem>
@@ -57,7 +57,7 @@ export function RegistrationForm() {
             <div className="space-y-2">
               <Label>Course</Label>
               <Select>
-                <SelectTrigger className="bg-background/40 h-12"><SelectValue placeholder="Select" /></SelectTrigger>
+                <SelectTrigger className="bg-background/40 h-11 sm:h-12"><SelectValue placeholder="Select" /></SelectTrigger>
                 <SelectContent>
                   <SelectItem value="neet">NEET</SelectItem>
                   <SelectItem value="jee">JEE Mains/Advanced</SelectItem>
@@ -67,7 +67,7 @@ export function RegistrationForm() {
               </Select>
             </div>
           </div>
-          <Button type="submit" size="lg" className="w-full bg-gradient-brand text-primary-foreground font-bold text-base h-14 shadow-glow-orange hover:opacity-90">
+          <Button type="submit" size="lg" className="w-full bg-gradient-brand text-primary-foreground font-bold text-base h-12 sm:h-14 shadow-glow-orange hover:opacity-90">
             <Sparkles className="w-5 h-5 mr-2" /> Register Now
           </Button>
         </motion.form>
