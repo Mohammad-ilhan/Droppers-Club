@@ -12,24 +12,24 @@ const resources = [
 
 export function Resources() {
   return (
-    <section id="resources" className="relative py-16 sm:py-20 lg:py-28 px-4 sm:px-6 bg-muted/40 border-y border-border/50">
+    <section id="resources" className="relative py-10 sm:py-20 lg:py-28 px-4 sm:px-6 bg-muted/40 border-y border-border/50">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-12 md:mb-16"
+          className="text-center mb-7 sm:mb-12 md:mb-16"
         >
           <p className="text-[10px] sm:text-xs tracking-[0.3em] text-secondary uppercase">Study Material</p>
-          <h2 className="text-3xl sm:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-semibold mt-3 text-primary">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-semibold mt-2 sm:mt-3 text-primary">
             Notes, PDFs & <span className="italic text-gradient-gold">Practice Sheets</span>
           </h2>
-          <p className="mt-4 text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
+          <p className="mt-3 sm:mt-4 text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
             A glimpse of the printed and digital material our students get — handwritten notes, DPPs, PYQs and quick-revision booklets.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5">
           {resources.map((r, i) => (
             <motion.div
               key={r.title}
@@ -37,21 +37,21 @@ export function Resources() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
-              className="group lift bg-card border border-border rounded-3xl p-5 sm:p-6 shadow-soft flex flex-col"
+              className="group lift bg-card border border-border rounded-2xl sm:rounded-3xl p-3.5 sm:p-6 shadow-soft flex flex-col"
             >
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-primary flex items-center justify-center shadow-glow-navy shrink-0">
-                  <r.icon className="w-6 h-6 sm:w-7 sm:h-7 text-secondary" />
+              <div className="flex items-start gap-2.5 sm:gap-4">
+                <div className="w-9 h-9 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-primary flex items-center justify-center shadow-glow-navy shrink-0">
+                  <r.icon className="w-4 h-4 sm:w-7 sm:h-7 text-secondary" />
                 </div>
                 <div className="min-w-0 flex-1">
-                  <div className="text-[10px] tracking-[0.25em] uppercase text-secondary font-semibold">{r.subject}</div>
-                  <h3 className="text-base sm:text-lg font-display font-semibold text-primary mt-1 leading-snug">{r.title}</h3>
+                  <div className="text-[9px] sm:text-[10px] tracking-[0.2em] sm:tracking-[0.25em] uppercase text-secondary font-semibold">{r.subject}</div>
+                  <h3 className="text-xs sm:text-lg font-display font-semibold text-primary mt-1 leading-snug">{r.title}</h3>
                   <p className="text-xs text-muted-foreground mt-1">{r.type} · {r.size}</p>
                 </div>
               </div>
-              <div className="mt-5 flex items-center justify-between pt-4 border-t border-border">
-                <span className="text-[10px] tracking-[0.25em] uppercase text-muted-foreground">Free Sample</span>
-                <button className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-primary group-hover:gap-2.5 transition-all">
+              <div className="mt-3 sm:mt-5 flex items-center justify-between gap-2 pt-3 sm:pt-4 border-t border-border">
+                <span className="text-[9px] sm:text-[10px] tracking-[0.16em] sm:tracking-[0.25em] uppercase text-muted-foreground">Sample</span>
+                <button className="inline-flex items-center gap-1 text-xs sm:text-sm font-semibold text-primary group-hover:gap-2.5 transition-all">
                   <Download className="w-4 h-4" /> Download
                 </button>
               </div>
@@ -59,7 +59,7 @@ export function Resources() {
           ))}
         </div>
 
-        <p className="mt-10 text-center text-xs sm:text-sm text-muted-foreground">
+        <p className="mt-7 sm:mt-10 text-center text-xs sm:text-sm text-muted-foreground">
           These are free demo samples of our notes &amp; sheets. Contact us for more sample copies — full study material is provided to enrolled students.
         </p>
       </div>
