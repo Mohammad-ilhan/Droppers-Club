@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Trophy, Medal, Award, TrendingUp, Star, GraduationCap } from "lucide-react";
+import { Trophy, Medal, Award, TrendingUp, Star } from "lucide-react";
 
 const metrics = [
   { n: "1200+", l: "Total Selections", i: Trophy },
@@ -21,26 +21,26 @@ const toppers = [
 
 export function Results() {
   return (
-    <section id="results" className="py-16 sm:py-20 lg:py-28 px-4 sm:px-6 overflow-hidden relative">
+    <section id="results" className="py-10 sm:py-20 lg:py-28 px-4 sm:px-6 overflow-hidden relative">
       <div className="absolute inset-0 dot-bg opacity-30" />
       <div className="relative max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-10 sm:mb-14"
+          className="text-center mb-7 sm:mb-14"
         >
           <p className="text-xs tracking-[0.3em] text-secondary uppercase">Hall of Fame</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-semibold mt-3 text-primary">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-semibold mt-2 sm:mt-3 text-primary">
             Our <span className="italic text-gradient-gold">Champions</span>
           </h2>
-          <p className="mt-4 text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto px-2">
+          <p className="mt-3 sm:mt-4 text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto px-2">
             Real students. Real ranks. Year after year, Dropper's Club continues to deliver Bhopal's best results in NEET, JEE & boards.
           </p>
         </motion.div>
 
         {/* Metrics strip */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5 mb-12 sm:mb-16">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5 mb-8 sm:mb-16">
           {metrics.map((m, i) => (
             <motion.div
               key={m.l}
@@ -48,12 +48,12 @@ export function Results() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.06 }}
-              className="bg-card border border-border rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-soft text-center"
+              className="bg-card border border-border rounded-2xl sm:rounded-3xl p-3 sm:p-6 shadow-soft text-center"
             >
-              <div className="w-10 h-10 sm:w-12 sm:h-12 mx-auto rounded-2xl bg-primary flex items-center justify-center shadow-glow-navy mb-3">
-                <m.i className="w-5 h-5 sm:w-6 sm:h-6 text-secondary" />
+              <div className="w-9 h-9 sm:w-12 sm:h-12 mx-auto rounded-xl sm:rounded-2xl bg-primary flex items-center justify-center shadow-glow-navy mb-2 sm:mb-3">
+                <m.i className="w-4 h-4 sm:w-6 sm:h-6 text-secondary" />
               </div>
-              <div className="text-2xl sm:text-3xl lg:text-4xl font-display font-semibold text-primary">{m.n}</div>
+              <div className="text-xl sm:text-3xl lg:text-4xl font-display font-semibold text-primary">{m.n}</div>
               <div className="text-[10px] sm:text-xs uppercase tracking-widest text-muted-foreground mt-1">{m.l}</div>
             </motion.div>
           ))}
