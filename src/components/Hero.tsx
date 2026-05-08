@@ -11,9 +11,9 @@ export function Hero() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 pt-8 sm:pt-16 lg:pt-20 pb-10 sm:pb-24 lg:pb-32 grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
           className="lg:col-span-7"
         >
           <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-primary/5 border border-primary/15 text-[10px] sm:text-xs font-medium mb-4 sm:mb-6">
@@ -64,7 +64,7 @@ export function Hero() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 30, scale: 0.96 }}
+          initial={false}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.9, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           className="hidden lg:block lg:col-span-5"
