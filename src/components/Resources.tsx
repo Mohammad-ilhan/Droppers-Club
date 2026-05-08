@@ -12,7 +12,7 @@ const resources = [
 
 export function Resources() {
   return (
-    <section id="resources" className="relative py-20 sm:py-24 md:py-28 px-4 sm:px-6">
+    <section id="resources" className="relative py-16 sm:py-20 lg:py-28 px-4 sm:px-6 bg-muted/40 border-y border-border/50">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
