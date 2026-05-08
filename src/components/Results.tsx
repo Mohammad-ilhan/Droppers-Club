@@ -60,7 +60,7 @@ export function Results() {
         </div>
 
         {/* Topper grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
           {toppers.map((t, i) => (
             <motion.article
               key={t.name}
@@ -68,27 +68,26 @@ export function Results() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ delay: (i % 4) * 0.06 }}
-              className="group relative lift bg-card border border-border rounded-3xl overflow-hidden shadow-soft"
+              className="group relative lift bg-card border border-border rounded-2xl sm:rounded-3xl overflow-hidden shadow-soft"
             >
-              {/* photo space */}
-              <div className={`relative aspect-[4/5] bg-gradient-to-br ${t.color} opacity-90`}>
-                <div className="absolute inset-0 dot-bg opacity-40" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-20 h-20 rounded-full bg-card/80 backdrop-blur ring-4 ring-secondary/30 flex items-center justify-center text-3xl">
-                    <GraduationCap className="w-9 h-9 text-primary" />
+              <div className={`h-1.5 bg-gradient-to-r ${t.color}`} />
+              <div className="p-3 sm:p-5">
+                <div className="flex items-start justify-between gap-2">
+                  <div className="min-w-0">
+                    <div className="text-[9px] sm:text-[10px] tracking-[0.22em] uppercase font-semibold text-secondary truncate">{t.exam}</div>
+                    <div className="text-sm sm:text-lg font-display font-semibold text-primary leading-tight mt-1">{t.name}</div>
+                  </div>
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl sm:rounded-2xl bg-primary flex items-center justify-center shrink-0">
+                    <Trophy className="w-4 h-4 sm:w-5 sm:h-5 text-secondary" />
                   </div>
                 </div>
-                <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-card/95 backdrop-blur text-[9px] tracking-[0.25em] uppercase font-semibold text-primary border border-border">
-                  {t.exam}
+                <div className="mt-3 sm:mt-4 rounded-xl sm:rounded-2xl bg-muted/60 border border-border p-2.5 sm:p-3">
+                  <div className="flex items-center gap-1 text-base sm:text-xl font-display font-semibold text-primary leading-none">
+                    <Star className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current text-secondary" /> {t.rank}
+                  </div>
+                  <div className="text-[11px] sm:text-sm text-muted-foreground mt-1">{t.score}</div>
                 </div>
-                <div className="absolute bottom-3 right-3 flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary text-secondary-foreground text-[10px] font-bold tracking-wider uppercase shadow-soft">
-                  <Star className="w-3 h-3 fill-current" /> {t.rank}
-                </div>
-              </div>
-              <div className="p-4 sm:p-5">
-                <div className="text-base sm:text-lg font-display font-semibold text-primary truncate">{t.name}</div>
-                <div className="text-xs sm:text-sm text-muted-foreground mt-1">{t.score}</div>
-                <div className="mt-3 inline-flex items-center text-[10px] tracking-[0.2em] uppercase font-semibold text-secondary">
+                <div className="mt-2.5 sm:mt-3 text-[9px] sm:text-[10px] tracking-[0.18em] uppercase font-semibold text-muted-foreground">
                   {t.batch}
                 </div>
               </div>
