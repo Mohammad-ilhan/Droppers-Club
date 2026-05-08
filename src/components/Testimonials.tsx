@@ -64,8 +64,8 @@ const thirdColumn = testimonials.slice(6, 9);
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="bg-background py-20 relative">
-      <div className="container z-10 mx-auto px-6">
+    <section id="testimonials" className="bg-background py-10 sm:py-20 relative">
+      <div className="container z-10 mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -76,23 +76,23 @@ export function Testimonials() {
           <div className="border border-primary/20 py-1 px-4 rounded-full text-xs tracking-[0.3em] uppercase text-secondary">
             Testimonials
           </div>
-          <h2 className="text-4xl md:text-5xl font-display font-semibold mt-5 text-primary tracking-tight">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-display font-semibold mt-4 sm:mt-5 text-primary tracking-tight">
             Words from <span className="text-gradient-gold italic font-normal">our toppers</span>
           </h2>
-          <p className="text-center mt-4 text-muted-foreground">
+          <p className="text-center mt-3 sm:mt-4 text-sm sm:text-base text-muted-foreground">
             Real stories from students who turned their dreams into ranks at Dropper's Club.
           </p>
         </motion.div>
 
         {/* Mobile: clean static grid (no infinite scroll). Desktop: animated columns. */}
-        <div className="md:hidden mt-10 grid grid-cols-1 gap-4">
-          {testimonials.slice(0, 5).map((t, i) => (
-            <div key={i} className="p-6 rounded-3xl border border-border shadow-soft bg-card">
-              <div className="text-sm leading-relaxed text-foreground">{t.text}</div>
-              <div className="flex items-center gap-3 mt-4">
-                <img width={40} height={40} src={t.image} alt={t.name} className="h-10 w-10 rounded-full object-cover" />
+        <div className="md:hidden mt-7 grid grid-cols-1 gap-3">
+          {testimonials.slice(0, 3).map((t, i) => (
+            <div key={i} className="p-4 rounded-2xl border border-border shadow-soft bg-card">
+              <div className="text-xs leading-relaxed text-foreground">{t.text}</div>
+              <div className="flex items-center gap-3 mt-3">
+                <img width={36} height={36} src={t.image} alt={t.name} className="h-9 w-9 rounded-full object-cover" />
                 <div className="flex flex-col">
-                  <div className="font-semibold tracking-tight leading-5 text-primary">{t.name}</div>
+                  <div className="text-sm font-semibold tracking-tight leading-5 text-primary">{t.name}</div>
                   <div className="leading-5 text-xs tracking-tight text-secondary">{t.role}</div>
                 </div>
               </div>
