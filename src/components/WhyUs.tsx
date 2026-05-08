@@ -54,7 +54,7 @@ export function WhyUs() {
               className="lift bg-card border border-border rounded-2xl sm:rounded-3xl p-3.5 sm:p-6 shadow-soft"
             >
               <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-primary flex items-center justify-center shadow-glow-navy mb-2.5 sm:mb-4">
-                <p.icon className="w-4.5 h-4.5 sm:w-6 sm:h-6 text-secondary" />
+                <p.icon className="w-4 h-4 sm:w-6 sm:h-6 text-secondary" />
               </div>
               <h3 className="text-sm sm:text-lg font-display font-semibold text-primary leading-tight">{p.title}</h3>
               <p className="text-[11px] sm:text-sm text-muted-foreground mt-1.5 sm:mt-2 leading-snug sm:leading-relaxed">{p.desc}</p>
