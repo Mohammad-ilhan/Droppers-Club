@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ChevronRight } from "lucide-react";
+
 
 const toppers = [
   { name: "Aarav Sharma", initials: "AS", exam: "NEET-UG '25", course: "Dropper Classroom Course", rank: "AIR 142" },
