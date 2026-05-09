@@ -2,6 +2,15 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, Trophy, Users, Star, Quote } from "lucide-react";
 
+const heroStars = [
+  { name: "Aarav Sharma", initials: "AS", exam: "NEET-UG '25", rank: "AIR 142" },
+  { name: "Priya Verma", initials: "PV", exam: "JEE Adv. '25", rank: "AIR 395" },
+  { name: "Kunal Rathore", initials: "KR", exam: "NEET-UG '25", rank: "AIR 56" },
+  { name: "Disha Patil", initials: "DP", exam: "CBSE 10th '25", rank: "99.2 %" },
+  { name: "Vikram Joshi", initials: "VJ", exam: "NEET-UG '25", rank: "AIR 78" },
+  { name: "Isha Raghav", initials: "IR", exam: "JEE Adv. '25", rank: "AIR 980" },
+];
+
 export function Hero() {
   return (
     <section id="home" className="relative overflow-hidden bg-gradient-hero">
@@ -69,34 +78,52 @@ export function Hero() {
           transition={{ duration: 0.9, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           className="hidden lg:block lg:col-span-5"
         >
-          <div className="relative lift">
-            {/* Soft gold halo */}
+          <div className="relative">
             <div className="absolute -inset-6 bg-gradient-gold opacity-20 blur-3xl rounded-[3rem]" />
-            {/* Decorative offset frame */}
             <div className="absolute inset-0 translate-x-3 translate-y-3 rounded-3xl border-2 border-primary/30" />
 
             <div className="relative bg-card rounded-3xl p-6 shadow-3d border border-border">
-              <div className="aspect-[4/5] rounded-2xl bg-gradient-to-br from-primary/8 to-secondary/15 border border-border flex items-center justify-center overflow-hidden relative">
-                <div className="absolute inset-0 dot-bg opacity-50" />
-                <div className="text-center p-8 relative">
-                  <div className="w-24 h-24 rounded-full bg-primary mx-auto mb-4 flex items-center justify-center text-3xl text-primary-foreground float ring-4 ring-secondary/30">
-                    👤
-                  </div>
-                  <p className="text-sm text-muted-foreground italic">[ Founder / Director Photo ]</p>
-                  <p className="text-[10px] tracking-widest text-muted-foreground/70 mt-1 uppercase">Reserved space</p>
-                </div>
-              </div>
-              <div className="mt-5 flex items-end justify-between">
+              <div className="flex items-center justify-between mb-4">
                 <div>
-                  <div className="text-[10px] uppercase tracking-[0.3em] text-secondary font-semibold">Founder &amp; Director</div>
-                  <div className="text-xl font-display font-semibold mt-1 text-primary">Dropper's Club</div>
+                  <div className="text-[10px] uppercase tracking-[0.3em] text-secondary font-semibold">Hall of Fame</div>
+                  <div className="text-xl font-display font-semibold mt-1 text-primary">Our Stars</div>
                 </div>
                 <div className="text-right text-[11px] text-muted-foreground leading-tight">
-                  Mentor to<br />1000+ Toppers
+                  Verified<br />Toppers
+                </div>
+              </div>
+
+              <div className="group relative h-[480px] overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-muted/40 to-card [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)]">
+                <div className="hero-stars-track flex flex-col gap-3 p-3 group-hover:[animation-play-state:paused]">
+                  {[...heroStars, ...heroStars].map((s, i) => (
+                    <div
+                      key={i}
+                      className="flex items-center gap-3 bg-card border border-border rounded-2xl p-3 shadow-soft"
+                    >
+                      <div className="shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center shadow-glow-navy">
+                        <span className="font-display text-sm font-semibold text-secondary">{s.initials}</span>
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <div className="text-[9px] tracking-[0.18em] uppercase font-semibold text-secondary truncate">{s.exam}</div>
+                        <div className="font-display text-sm font-semibold text-primary truncate">{s.name}</div>
+                      </div>
+                      <div className="font-display text-base font-semibold text-primary whitespace-nowrap">{s.rank}</div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
           </div>
+
+          <style>{`
+            .hero-stars-track {
+              animation: hero-stars-scroll 22s linear infinite;
+            }
+            @keyframes hero-stars-scroll {
+              from { transform: translateY(0); }
+              to { transform: translateY(-50%); }
+            }
+          `}</style>
         </motion.div>
       </div>
     </section>
