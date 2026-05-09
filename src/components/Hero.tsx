@@ -2,6 +2,15 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, Trophy, Users, Star, Quote } from "lucide-react";
 
+const heroStars = [
+  { name: "Aarav Sharma", initials: "AS", exam: "NEET-UG '25", rank: "AIR 142" },
+  { name: "Priya Verma", initials: "PV", exam: "JEE Adv. '25", rank: "AIR 395" },
+  { name: "Kunal Rathore", initials: "KR", exam: "NEET-UG '25", rank: "AIR 56" },
+  { name: "Disha Patil", initials: "DP", exam: "CBSE 10th '25", rank: "99.2 %" },
+  { name: "Vikram Joshi", initials: "VJ", exam: "NEET-UG '25", rank: "AIR 78" },
+  { name: "Isha Raghav", initials: "IR", exam: "JEE Adv. '25", rank: "AIR 980" },
+];
+
 export function Hero() {
   return (
     <section id="home" className="relative overflow-hidden bg-gradient-hero">
