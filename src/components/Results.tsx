@@ -30,12 +30,7 @@ function Card({ t }: { t: (typeof toppers)[number] }) {
         <h3 className="font-display text-sm sm:text-base font-semibold text-primary truncate">{t.name}</h3>
         <p className="text-[10px] sm:text-xs text-muted-foreground mt-0.5 truncate">{t.course}</p>
         <p className="text-[10px] sm:text-xs text-muted-foreground truncate">{t.exam}</p>
-        <div className="mt-2 flex items-center justify-center gap-1.5">
-          <span className="font-display text-lg sm:text-xl font-semibold text-primary">{t.rank}</span>
-          <span className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-primary flex items-center justify-center">
-            <ChevronRight className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-secondary" />
-          </span>
-        </div>
+        <div className="mt-2 font-display text-lg sm:text-xl font-semibold text-primary">{t.rank}</div>
       </div>
     </article>
   );
