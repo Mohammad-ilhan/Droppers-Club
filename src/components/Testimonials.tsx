@@ -88,13 +88,26 @@ export function Testimonials() {
         <div className="md:hidden mt-7 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
           <div className="testimonials-mobile-track flex gap-3 w-max">
             {[...testimonials, ...testimonials].map((t, i) => (
-              <div key={i} className="w-[270px] shrink-0 p-4 rounded-2xl border border-border shadow-soft bg-card">
+              <div
+                key={i}
+                className="w-[270px] shrink-0 p-4 rounded-2xl border border-border shadow-soft bg-card"
+              >
                 <div className="text-xs leading-relaxed text-foreground line-clamp-3">{t.text}</div>
                 <div className="flex items-center gap-3 mt-3">
-                  <img width={36} height={36} src={t.image} alt={t.name} className="h-9 w-9 rounded-full object-cover" />
+                  <img
+                    width={36}
+                    height={36}
+                    src={t.image}
+                    alt={t.name}
+                    className="h-9 w-9 rounded-full object-cover"
+                  />
                   <div className="flex flex-col min-w-0">
-                    <div className="text-sm font-semibold tracking-tight leading-5 text-primary truncate">{t.name}</div>
-                    <div className="leading-5 text-xs tracking-tight text-secondary truncate">{t.role}</div>
+                    <div className="text-sm font-semibold tracking-tight leading-5 text-primary truncate">
+                      {t.name}
+                    </div>
+                    <div className="leading-5 text-xs tracking-tight text-secondary truncate">
+                      {t.role}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -104,8 +117,16 @@ export function Testimonials() {
 
         <div className="hidden md:flex justify-center gap-6 mt-12 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[740px] overflow-hidden">
           <TestimonialsColumn testimonials={firstColumn} duration={15} />
-          <TestimonialsColumn testimonials={secondColumn} className="hidden md:block" duration={19} />
-          <TestimonialsColumn testimonials={thirdColumn} className="hidden lg:block" duration={17} />
+          <TestimonialsColumn
+            testimonials={secondColumn}
+            className="hidden md:block"
+            duration={19}
+          />
+          <TestimonialsColumn
+            testimonials={thirdColumn}
+            className="hidden lg:block"
+            duration={17}
+          />
         </div>
       </div>
       <style>{`
