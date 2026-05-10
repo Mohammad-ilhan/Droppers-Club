@@ -58,7 +58,7 @@ export function Results() {
 
         {/* Auto-scrolling marquee — pause on hover */}
         <div className="group relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
-          <div className="marquee-track flex gap-3 sm:gap-5 w-max group-hover:[animation-play-state:paused]">
+          <div className="marquee-track flex gap-3 sm:gap-5 w-max">
             {[...toppers, ...toppers].map((t, i) => (
               <Card key={i} t={t} />
             ))}
@@ -73,10 +73,14 @@ export function Results() {
       <style>{`
         .marquee-track {
           animation: stars-marquee 40s linear infinite;
+          will-change: transform;
         }
         @keyframes stars-marquee {
           from { transform: translateX(0); }
           to { transform: translateX(-50%); }
+        }
+        @media (hover: hover) {
+          .group:hover .marquee-track { animation-play-state: paused; }
         }
       `}</style>
     </section>
