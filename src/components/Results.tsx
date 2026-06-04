@@ -141,8 +141,6 @@ export function Results() {
         className="relative mb-10 sm:mb-16 overflow-hidden rounded-2xl sm:rounded-3xl mx-auto max-w-4xl"
         style={{ background: "linear-gradient(135deg, oklch(0.18 0.05 260), oklch(0.25 0.08 260))" }}
       >
-        <div className="absolute inset-0 dot-bg-gold opacity-30" />
-        <div className="gold-shimmer-border absolute inset-0 rounded-2xl sm:rounded-3xl" />
 
         <div className="relative grid grid-cols-3 divide-x divide-white/10">
           {STATS.map((s) => (
