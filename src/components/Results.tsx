@@ -180,7 +180,7 @@ export function Results() {
         </motion.div>
 
         {/* ── Marquee — consistent card size across all devices ── */}
-        <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]">
+        <div className="relative overflow-hidden">
           {/* Row 1 — left to right */}
           <div className="marquee-row-1 flex gap-3 sm:gap-4 w-max mb-3 sm:mb-4">
             {[...toppers, ...toppers].map((t, i) => (
