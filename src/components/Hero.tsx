@@ -67,9 +67,9 @@ export function Hero() {
       {/* Subtle dot pattern */}
       <div className="absolute inset-0 dot-bg opacity-60" />
       {/* Diagonal stripe accent top-right */}
-      <div className="absolute top-0 right-0 w-1/2 h-full stripe-bg opacity-50" />
+      <div className="absolute top-0 right-0 w-1/2 max-w-full h-full stripe-bg opacity-50" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 pt-10 sm:pt-16 lg:pt-20 pb-10 sm:pb-20 lg:pb-28 grid md:grid-cols-12 gap-8 lg:gap-16 items-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 pt-10 sm:pt-16 lg:pt-20 pb-10 sm:pb-20 lg:pb-28 grid md:grid-cols-12 gap-8 lg:gap-16 items-center overflow-hidden">
 
         {/* ─── Left: Text ─── */}
         <motion.div
@@ -140,18 +140,18 @@ export function Hero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7 }}
-            className="mt-7 sm:mt-9 flex flex-wrap gap-3"
+            className="mt-7 sm:mt-9 flex flex-col sm:flex-row flex-wrap gap-3"
           >
             <a
               href="#register"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-semibold text-sm shadow-glow-navy hover:bg-primary/90 hover:-translate-y-0.5 transition-all duration-200"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-semibold text-sm shadow-glow-navy hover:bg-primary/90 hover:-translate-y-0.5 transition-all duration-200"
             >
               Register Free
               <ArrowRight className="w-4 h-4" />
             </a>
             <a
               href="#results"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border-2 border-secondary text-secondary font-semibold text-sm hover:bg-secondary/8 hover:-translate-y-0.5 transition-all duration-200"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg border-2 border-secondary text-secondary font-semibold text-sm hover:bg-secondary/8 hover:-translate-y-0.5 transition-all duration-200"
             >
               <Trophy className="w-4 h-4" />
               See Our Results
