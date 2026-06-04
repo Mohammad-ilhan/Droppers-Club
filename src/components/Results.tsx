@@ -179,20 +179,33 @@ export function Results() {
           </p>
         </motion.div>
 
-        {/* ── Marquee — consistent card size across all devices ── */}
-        <div className="relative overflow-hidden">
-          {/* Row 1 — left to right */}
-          <div className="marquee-row-1 flex gap-3 sm:gap-4 w-max mb-3 sm:mb-4">
-            {[...toppers, ...toppers].map((t, i) => (
-              <TopperCard key={`r1-${i}`} t={t} />
+        {/* ── Mobile/Tablet: swipeable scroll-snap carousel ── */}
+        <div className="lg:hidden -mx-4 sm:-mx-6">
+          <div className="flex gap-3 sm:gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth px-4 sm:px-6 pb-4 toppers-scroll">
+            {toppers.map((t, i) => (
+              <div key={`m-${i}`} className="snap-start shrink-0">
+                <TopperCard t={t} />
+              </div>
             ))}
           </div>
-          {/* Row 2 — right to left (offset) */}
-          <div className="marquee-row-2 flex gap-3 sm:gap-4 w-max">
-            {[...toppers.slice(5), ...toppers, ...toppers.slice(0, 5)].map((t, i) => (
-              <TopperCard key={`r2-${i}`} t={t} />
-            ))}
-          </div>
+          <p className="text-center text-[10px] text-muted-foreground/70 mt-1 sm:mt-2">
+            ← swipe to see all {toppers.length} toppers →
+          </p>
+        </div>
+
+        {/* ── Desktop: clean responsive grid ── */}
+        <div className="hidden lg:grid grid-cols-5 gap-5">
+          {toppers.map((t, i) => (
+            <motion.div
+              key={`d-${i}`}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.45, delay: (i % 5) * 0.06 }}
+            >
+              <TopperCard t={t} />
+            </motion.div>
+          ))}
         </div>
 
         <p className="text-center text-[11px] sm:text-xs text-muted-foreground mt-6 sm:mt-10 italic">
@@ -201,27 +214,15 @@ export function Results() {
       </div>
 
       <style>{`
-        .marquee-row-1 {
-          animation: marquee-ltr 36s linear infinite;
-          will-change: transform;
+        .toppers-scroll {
+          scrollbar-width: thin;
+          scrollbar-color: oklch(0.75 0.02 260) transparent;
         }
-        .marquee-row-2 {
-          animation: marquee-rtl 40s linear infinite;
-          will-change: transform;
-        }
-        @keyframes marquee-ltr {
-          from { transform: translateX(0); }
-          to   { transform: translateX(-50%); }
-        }
-        @keyframes marquee-rtl {
-          from { transform: translateX(-50%); }
-          to   { transform: translateX(0); }
-        }
-        @media (hover: hover) {
-          .marquee-row-1:hover,
-          .marquee-row-2:hover {
-            animation-play-state: paused;
-          }
+        .toppers-scroll::-webkit-scrollbar { height: 6px; }
+        .toppers-scroll::-webkit-scrollbar-track { background: transparent; }
+        .toppers-scroll::-webkit-scrollbar-thumb {
+          background: oklch(0.85 0.02 260);
+          border-radius: 999px;
         }
       `}</style>
     </section>
