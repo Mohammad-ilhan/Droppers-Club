@@ -30,13 +30,13 @@ export const Route = createFileRoute("/")({
 
 function Home() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen max-w-full overflow-x-clip bg-background">
       <SplashScreen />
       <div className="sticky top-0 z-50">
         <AlertBar />
         <Navbar />
       </div>
-      <main>
+      <main className="max-w-full overflow-x-clip">
         <Hero />
         <Courses />
         <WhyUs />
