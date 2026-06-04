@@ -1,144 +1,89 @@
 import { motion } from "framer-motion";
-import { TestimonialsColumn } from "@/components/ui/testimonials-columns-1";
+import { Star, BadgeCheck, Quote } from "lucide-react";
 
 const testimonials = [
-  {
-    text: "The mentorship at Dropper's Club changed my approach to NEET. The personal attention from teachers made all the difference in my AIR.",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
-    name: "Aarav Sharma",
-    role: "NEET 2024 — AIR 142",
-  },
-  {
-    text: "Best decision I ever made. The faculty doesn't just teach — they build your confidence and discipline every single day.",
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
-    name: "Priya Verma",
-    role: "JEE Advanced 2024",
-  },
-  {
-    text: "Doubt sessions, regular tests, and a family-like environment helped me crack NEET in my dropper year. Forever grateful.",
-    image: "https://randomuser.me/api/portraits/men/45.jpg",
-    name: "Rohan Mehta",
-    role: "NEET 2023 — AIR 56",
-  },
-  {
-    text: "From struggling in physics to scoring 99.2 percentile in JEE Mains — the structured approach here made it possible.",
-    image: "https://randomuser.me/api/portraits/women/68.jpg",
-    name: "Sneha Patel",
-    role: "JEE Mains 2024",
-  },
-  {
-    text: "Small batch sizes meant teachers actually knew my weak areas. The monthly performance reviews kept me on track.",
-    image: "https://randomuser.me/api/portraits/men/12.jpg",
-    name: "Kunal Rathore",
-    role: "NEET Qualifier 2024",
-  },
-  {
-    text: "Coming from a small town, I needed guidance more than just lectures. Dropper's Club gave me both — and a top rank.",
-    image: "https://randomuser.me/api/portraits/women/22.jpg",
-    name: "Ananya Gupta",
-    role: "JEE 2024 — 99.4 %ile",
-  },
-  {
-    text: "The teachers stay back after class to clear every doubt. That kind of dedication is rare in coaching today.",
-    image: "https://randomuser.me/api/portraits/men/78.jpg",
-    name: "Vikram Joshi",
-    role: "Class 12 Topper",
-  },
-  {
-    text: "The test series mirrors the actual exam pressure. I walked into NEET feeling fully prepared, not nervous.",
-    image: "https://randomuser.me/api/portraits/women/55.jpg",
-    name: "Isha Raghav",
-    role: "NEET 2024 Selected",
-  },
-  {
-    text: "Affordable fees, world-class teaching, and a mentor who actually cares about your future. Highly recommend.",
-    image: "https://randomuser.me/api/portraits/men/64.jpg",
-    name: "Harsh Tiwari",
-    role: "JEE Mains 2023",
-  },
+  { text: "The mentorship at Dropper's Club changed my approach to NEET. Personal attention from teachers made all the difference.", image: "https://randomuser.me/api/portraits/men/32.jpg", name: "Aarav Sharma", role: "NEET 2024 — AIR 142", exam: "NEET" },
+  { text: "Best decision I ever made. Faculty doesn't just teach — they build your confidence and discipline every single day.", image: "https://randomuser.me/api/portraits/women/44.jpg", name: "Priya Verma", role: "JEE Advanced 2024", exam: "JEE" },
+  { text: "Doubt sessions, regular tests, and a family-like environment helped me crack NEET in my dropper year. Forever grateful.", image: "https://randomuser.me/api/portraits/men/45.jpg", name: "Rohan Mehta", role: "NEET 2023 — AIR 56", exam: "NEET" },
+  { text: "From struggling in physics to 99.2 percentile in JEE Mains — the structured approach here made it possible.", image: "https://randomuser.me/api/portraits/women/68.jpg", name: "Sneha Patel", role: "JEE Mains 2024", exam: "JEE" },
+  { text: "Small batch sizes meant teachers actually knew my weak areas. The monthly performance reviews kept me on track.", image: "https://randomuser.me/api/portraits/men/12.jpg", name: "Kunal Rathore", role: "NEET Qualifier 2024", exam: "NEET" },
+  { text: "Coming from a small town, I needed guidance more than lectures. Dropper's Club gave me both — and a top rank.", image: "https://randomuser.me/api/portraits/women/22.jpg", name: "Ananya Gupta", role: "JEE 2024 — 99.4 %ile", exam: "JEE" },
 ];
 
-const firstColumn = testimonials.slice(0, 3);
-const secondColumn = testimonials.slice(3, 6);
-const thirdColumn = testimonials.slice(6, 9);
+const examColor: Record<string, string> = {
+  NEET: "#c0392b",
+  JEE: "#2980b9",
+};
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="bg-background py-10 sm:py-20 relative">
-      <div className="container z-10 mx-auto px-4 sm:px-6">
+    <section id="testimonials" className="py-14 sm:py-20 px-4 sm:px-6 bg-muted/40 border-y border-border">
+      <div className="max-w-6xl mx-auto">
+
+        {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="flex flex-col items-center justify-center max-w-[540px] mx-auto text-center"
+          className="mb-10 sm:mb-14"
         >
-          <div className="border border-primary/20 py-1 px-4 rounded-full text-xs tracking-[0.3em] uppercase text-secondary">
-            Testimonials
+          <div className="flex items-center gap-1.5 mb-3">
+            {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 text-secondary fill-secondary" />)}
+            <span className="ml-1 text-sm font-bold text-primary">4.9</span>
+            <span className="text-muted-foreground text-sm">/ 5.0 · 200+ reviews</span>
           </div>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-display font-semibold mt-4 sm:mt-5 text-primary tracking-tight">
-            Words from <span className="text-gradient-gold italic font-normal">our toppers</span>
+          <p className="text-xs font-bold tracking-[0.3em] text-secondary uppercase mb-2">Student Reviews</p>
+          <h2 className="text-2xl sm:text-4xl font-display font-bold text-primary">
+            Words from Our Toppers
           </h2>
-          <p className="text-center mt-3 sm:mt-4 text-sm sm:text-base text-muted-foreground">
+          <div className="mt-2 w-12 h-[3px] bg-gradient-gold rounded-full" />
+          <p className="mt-4 text-sm sm:text-base text-muted-foreground max-w-xl">
             Real stories from students who turned their dreams into ranks at Dropper's Club.
           </p>
         </motion.div>
 
-        {/* Mobile: compact moving strip. Desktop: animated columns. */}
-        <div className="md:hidden mt-7 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
-          <div className="testimonials-mobile-track flex gap-3 w-max">
-            {[...testimonials, ...testimonials].map((t, i) => (
-              <div
-                key={i}
-                className="w-[270px] shrink-0 p-4 rounded-2xl border border-border shadow-soft bg-card"
+        {/* Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {testimonials.map((t, i) => {
+            const color = examColor[t.exam] ?? "#d4a017";
+            return (
+              <motion.div
+                key={t.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.07 }}
+                className="bg-white rounded-xl border border-border shadow-card hover:-translate-y-1 hover:shadow-glow-navy transition-all duration-300 overflow-hidden relative"
+                style={{ borderLeft: `3px solid ${color}` }}
               >
-                <div className="text-xs leading-relaxed text-foreground line-clamp-3">{t.text}</div>
-                <div className="flex items-center gap-3 mt-3">
-                  <img
-                    width={36}
-                    height={36}
-                    src={t.image}
-                    alt={t.name}
-                    className="h-9 w-9 rounded-full object-cover"
-                  />
-                  <div className="flex flex-col min-w-0">
-                    <div className="text-sm font-semibold tracking-tight leading-5 text-primary truncate">
-                      {t.name}
-                    </div>
-                    <div className="leading-5 text-xs tracking-tight text-secondary truncate">
-                      {t.role}
+                {/* Quote watermark */}
+                <Quote className="absolute top-4 right-4 w-8 h-8 text-primary/5" />
+
+                <div className="p-5">
+                  {/* Stars */}
+                  <div className="flex gap-0.5 mb-3">
+                    {[...Array(5)].map((_, j) => <Star key={j} className="w-3.5 h-3.5 text-secondary fill-secondary" />)}
+                  </div>
+
+                  <p className="text-sm text-foreground/85 leading-relaxed">"{t.text}"</p>
+
+                  {/* Author */}
+                  <div className="flex items-center gap-3 mt-4 pt-4 border-t border-border">
+                    <img src={t.image} alt={t.name} className="w-9 h-9 rounded-full object-cover shrink-0" style={{ boxShadow: `0 0 0 2px ${color}40` }} />
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-1">
+                        <span className="text-sm font-bold text-primary truncate">{t.name}</span>
+                        <BadgeCheck className="w-3.5 h-3.5 shrink-0" style={{ color }} />
+                      </div>
+                      <div className="text-xs font-medium truncate mt-0.5" style={{ color }}>{t.role}</div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="hidden md:flex justify-center gap-6 mt-12 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[740px] overflow-hidden">
-          <TestimonialsColumn testimonials={firstColumn} duration={15} />
-          <TestimonialsColumn
-            testimonials={secondColumn}
-            className="hidden md:block"
-            duration={19}
-          />
-          <TestimonialsColumn
-            testimonials={thirdColumn}
-            className="hidden lg:block"
-            duration={17}
-          />
+              </motion.div>
+            );
+          })}
         </div>
       </div>
-      <style>{`
-        .testimonials-mobile-track {
-          animation: testimonials-mobile-marquee 42s linear infinite;
-          will-change: transform;
-        }
-        @keyframes testimonials-mobile-marquee {
-          from { transform: translateX(0); }
-          to { transform: translateX(-50%); }
-        }
-      `}</style>
     </section>
   );
 }
