@@ -44,10 +44,10 @@ function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
 }
 
 /* ─── Single topper card — same look on all devices ─── */
-function TopperCard({ t }: { t: (typeof toppers)[number] }) {
+function TopperCard({ t, className = "" }: { t: (typeof toppers)[number]; className?: string }) {
   return (
     <article
-      className="group relative flex-shrink-0 w-44 sm:w-52 rounded-2xl overflow-hidden border border-border bg-card shadow-soft hover:-translate-y-2 hover:shadow-glow-gold transition-all duration-300"
+      className={`group relative flex-shrink-0 w-44 sm:w-52 rounded-2xl overflow-hidden border border-border bg-card shadow-soft hover:-translate-y-2 hover:shadow-glow-gold transition-all duration-300 ${className}`}
     >
       {/* Photo / avatar area */}
       <div
@@ -179,8 +179,15 @@ export function Results() {
           </p>
         </motion.div>
 
-        {/* ── Marquee — consistent card size across all devices ── */}
-        <div className="relative overflow-hidden">
+        {/* ── Mobile cards — no endless auto-loop ── */}
+        <div className="grid grid-cols-2 gap-3 sm:hidden">
+          {toppers.slice(0, 6).map((t) => (
+            <TopperCard key={t.name} t={t} className="w-full rounded-xl" />
+          ))}
+        </div>
+
+        {/* ── Desktop marquee ── */}
+        <div className="relative hidden overflow-hidden sm:block">
           {/* Row 1 — left to right */}
           <div className="marquee-row-1 flex gap-3 sm:gap-4 w-max mb-3 sm:mb-4">
             {[...toppers, ...toppers].map((t, i) => (
