@@ -180,15 +180,15 @@ export function Results() {
         </motion.div>
 
         {/* ── Marquee — consistent card size across all devices ── */}
-        <div className="relative overflow-hidden">
+        <div className="relative w-full max-w-full overflow-hidden">
           {/* Row 1 — left to right */}
-          <div className="marquee-row-1 flex gap-3 sm:gap-4 w-max mb-3 sm:mb-4">
+          <div className="marquee-row-1 flex gap-3 sm:gap-4 w-fit mb-3 sm:mb-4">
             {[...toppers, ...toppers].map((t, i) => (
               <TopperCard key={`r1-${i}`} t={t} />
             ))}
           </div>
           {/* Row 2 — right to left (offset) */}
-          <div className="marquee-row-2 flex gap-3 sm:gap-4 w-max">
+          <div className="marquee-row-2 flex gap-3 sm:gap-4 w-fit">
             {[...toppers.slice(5), ...toppers, ...toppers.slice(0, 5)].map((t, i) => (
               <TopperCard key={`r2-${i}`} t={t} />
             ))}
