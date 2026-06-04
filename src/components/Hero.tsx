@@ -189,50 +189,17 @@ export function Hero() {
           className="md:col-span-5"
         >
           <div className="relative max-w-xs sm:max-w-sm mx-auto md:max-w-none">
-            {/* Gold accent border card */}
-            <div className="absolute -top-2 -left-2 -right-2 -bottom-2 rounded-2xl border-2 border-secondary/20" />
-            <div className="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-secondary" />
-
-            <div className="relative bg-white rounded-xl shadow-card border border-border overflow-hidden">
-              {/* Navy header strip */}
-              <div className="bg-primary px-5 py-4 flex items-center justify-between">
-                <div>
-                  <div className="text-[10px] tracking-[0.3em] text-secondary/80 uppercase font-semibold">Dropper's Club</div>
-                  <div className="text-white font-display text-lg font-semibold mt-0.5">Admission Card</div>
+            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-border bg-card shadow-card">
+              <div className="absolute inset-0 dot-bg opacity-40" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/10" />
+              <div className="relative h-full w-full flex flex-col items-center justify-center px-6 text-center">
+                <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-primary/10 border-2 border-primary/20 flex items-center justify-center float">
+                  <span className="text-5xl sm:text-6xl">👤</span>
                 </div>
-                <div className="w-12 h-12 rounded-full bg-secondary/20 border-2 border-secondary/40 flex items-center justify-center">
-                  <TrendingUp className="w-6 h-6 text-secondary" />
-                </div>
+                <p className="mt-4 font-display text-lg font-semibold text-primary">Director / Founder</p>
+                <p className="text-xs text-muted-foreground mt-1">Dropper's Club, Bhopal</p>
+                <p className="mt-2 text-[10px] text-muted-foreground/60 italic">Client photo reserved</p>
               </div>
-
-              {/* Photo area */}
-              <div className="aspect-[4/3] bg-muted flex items-center justify-center relative overflow-hidden border-b border-border">
-                <div className="absolute inset-0 dot-bg opacity-50" />
-                <div className="text-center relative px-6">
-                  <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-primary/10 border-2 border-primary/20 mx-auto mb-3 flex items-center justify-center float">
-                    <span className="text-3xl sm:text-4xl">👤</span>
-                  </div>
-                  <p className="text-xs text-muted-foreground font-medium">Director / Founder</p>
-                  <div className="mt-1.5 text-[10px] text-muted-foreground/60 italic">Client photo reserved</div>
-                </div>
-              </div>
-
-              {/* Info rows */}
-              <div className="p-4 space-y-2.5">
-                {[
-                  { label: "Institute", value: "Dropper's Club, Bhopal" },
-                  { label: "Courses", value: "NEET · JEE · Foundation" },
-                  { label: "Session", value: "2025 — 2026" },
-                ].map((row) => (
-                  <div key={row.label} className="flex items-center justify-between text-sm border-b border-dashed border-border/60 pb-2 last:border-0 last:pb-0">
-                    <span className="text-muted-foreground text-xs uppercase tracking-wider">{row.label}</span>
-                    <span className="font-semibold text-primary text-xs">{row.value}</span>
-                  </div>
-                ))}
-              </div>
-
-              {/* Bottom gold strip */}
-              <div className="h-2 bg-gradient-gold" />
             </div>
           </div>
         </motion.div>
