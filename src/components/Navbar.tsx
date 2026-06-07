@@ -32,21 +32,13 @@ export function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex items-center justify-between gap-4">
 
-          {/* ── Real Logo ── */}
-          <a href="#home" className="flex items-center gap-3 shrink-0 group">
+          {/* ── Logo only (brand name lives in banner above) ── */}
+          <a href="#home" className="flex items-center gap-2 shrink-0 group">
             <img
               src={logoImg}
               alt="Dropper's Club Logo"
-              className="w-11 h-11 sm:w-13 sm:h-13 rounded-full object-cover border-2 border-border group-hover:border-secondary transition-colors duration-200"
+              className="w-10 h-10 sm:w-11 sm:h-11 rounded-full object-cover border-2 border-border group-hover:border-secondary transition-colors duration-200"
             />
-            <div className="leading-tight">
-              <div className="font-display font-bold text-sm sm:text-base text-primary tracking-tight">
-                Dropper's Club
-              </div>
-              <div className="text-[9px] sm:text-[10px] tracking-[0.28em] text-muted-foreground uppercase font-medium">
-                Bhopal · Est. 2019
-              </div>
-            </div>
           </a>
 
           {/* ── Desktop Nav ── */}
