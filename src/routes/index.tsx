@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SplashScreen } from "@/components/SplashScreen";
 import { AlertBar } from "@/components/AlertBar";
 import { Navbar } from "@/components/Navbar";
+import { BrandBanner } from "@/components/BrandBanner";
 import { Hero } from "@/components/Hero";
 import { Courses } from "@/components/Courses";
 import { WhyUs } from "@/components/WhyUs";
@@ -32,6 +33,7 @@ function Home() {
   return (
     <div className="min-h-screen max-w-full overflow-x-clip bg-background">
       <SplashScreen />
+      <BrandBanner />
       <div className="sticky top-0 z-50">
         <AlertBar />
         <Navbar />
