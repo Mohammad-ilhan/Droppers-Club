@@ -206,7 +206,7 @@
   .marquee {
     display: flex;
     width: max-content;
-    animation: marquee 32s linear infinite;
+    animation: marquee 18s linear infinite;
   }
   @keyframes marquee {
     from { transform: translateX(0); }
