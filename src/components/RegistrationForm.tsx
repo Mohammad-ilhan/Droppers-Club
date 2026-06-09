@@ -102,7 +102,7 @@ export function RegistrationForm() {
           className="mb-10 sm:mb-14"
         >
           <p className="text-xs font-bold tracking-[0.3em] text-secondary uppercase mb-2">Join Us</p>
-          <h2 className="text-2xl sm:text-4xl font-display font-bold text-primary">
+          <h2 className="text-2xl sm:text-4xl font-display font-bold text-foreground">
             Start Your Topper Journey
           </h2>
           <div className="mt-2 w-12 h-[3px] bg-gradient-gold rounded-full" />
@@ -121,7 +121,7 @@ export function RegistrationForm() {
             className="md:col-span-2 space-y-5"
           >
             <div className="rounded-xl p-5 sm:p-6 shadow-card border border-border bg-card space-y-4">
-              <h3 className="font-display text-lg sm:text-xl font-semibold text-primary">What you get</h3>
+              <h3 className="font-display text-lg sm:text-xl font-semibold text-foreground">What you get</h3>
               {BENEFITS.map((b) => (
                 <div key={b.text} className="flex items-start gap-3">
                   <b.icon className="w-4 h-4 text-secondary shrink-0 mt-0.5" />
@@ -138,11 +138,11 @@ export function RegistrationForm() {
               ].map((item) => (
                 <div key={item.label} className="flex items-center gap-3">
                   <div className="w-8 h-8 rounded-lg bg-primary/8 flex items-center justify-center">
-                    <item.icon className="w-4 h-4 text-primary" />
+                    <item.icon className="w-4 h-4 text-foreground" />
                   </div>
                   <div>
                     <div className="text-[10px] text-muted-foreground uppercase tracking-wider">{item.label}</div>
-                    <div className="text-sm font-semibold text-primary">{item.value}</div>
+                    <div className="text-sm font-semibold text-foreground">{item.value}</div>
                   </div>
                 </div>
               ))}

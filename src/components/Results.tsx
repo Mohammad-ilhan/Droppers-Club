@@ -93,7 +93,7 @@ function TopperCard({ t }: { t: (typeof toppers)[number] }) {
 
       {/* Info panel */}
       <div className="px-3 py-3 sm:px-4 sm:py-4 text-center space-y-1">
-        <h3 className="font-display text-sm sm:text-[15px] font-bold text-primary leading-tight truncate">
+        <h3 className="font-display text-sm sm:text-[15px] font-bold text-foreground leading-tight truncate">
           {t.name}
         </h3>
         <p className="text-[10px] sm:text-xs text-muted-foreground truncate">{t.course}</p>
@@ -171,7 +171,7 @@ export function Results() {
               Hall of Fame · Latest Results 2025
             </span>
           </div>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-primary">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-foreground">
             Meet our <span className="italic text-gradient-gold">stars</span>
           </h2>
           <p className="mt-3 sm:mt-4 text-sm sm:text-base text-muted-foreground max-w-xl mx-auto px-2">

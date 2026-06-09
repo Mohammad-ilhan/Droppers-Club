@@ -32,7 +32,7 @@ export function WhyUs() {
           className="mb-10 sm:mb-14"
         >
           <p className="text-xs font-bold tracking-[0.3em] text-secondary uppercase mb-2">Why Dropper's Club</p>
-          <h2 className="text-2xl sm:text-4xl font-display font-bold text-primary">
+          <h2 className="text-2xl sm:text-4xl font-display font-bold text-foreground">
             Why Parents Choose Us
           </h2>
           <div className="mt-2 w-12 h-[3px] bg-gradient-gold rounded-full" />
@@ -57,7 +57,7 @@ export function WhyUs() {
                 <p.icon className="w-5 h-5 text-secondary" />
               </div>
               <div>
-                <h3 className="text-sm sm:text-base font-display font-bold text-primary leading-snug">{p.title}</h3>
+                <h3 className="text-sm sm:text-base font-display font-bold text-foreground leading-snug">{p.title}</h3>
                 <p className="text-xs sm:text-sm text-muted-foreground mt-1.5 leading-relaxed">{p.desc}</p>
               </div>
             </motion.div>
@@ -72,7 +72,7 @@ export function WhyUs() {
           className="mb-10 sm:mb-12"
         >
           <p className="text-xs font-bold tracking-[0.3em] text-secondary uppercase mb-2">Student Journey</p>
-          <h3 className="text-xl sm:text-3xl font-display font-bold text-primary">
+          <h3 className="text-xl sm:text-3xl font-display font-bold text-foreground">
             From day one to selection day.
           </h3>
           <div className="mt-2 w-12 h-[3px] bg-gradient-gold rounded-full" />
@@ -93,7 +93,7 @@ export function WhyUs() {
               <div className="relative z-10 w-12 h-12 rounded-full bg-primary border-2 border-primary flex items-center justify-center mb-3 shadow-glow-navy">
                 <span className="text-sm font-bold text-secondary">{j.step}</span>
               </div>
-              <h4 className="text-xs font-bold text-primary leading-tight">{j.title}</h4>
+              <h4 className="text-xs font-bold text-foreground leading-tight">{j.title}</h4>
               <p className="text-[10px] text-muted-foreground mt-1 leading-snug">{j.desc}</p>
             </motion.div>
           ))}
@@ -110,11 +110,11 @@ export function WhyUs() {
               transition={{ delay: i * 0.06 }}
               className="bg-card border border-border rounded-xl p-4 shadow-card relative overflow-hidden"
             >
-              <div className="absolute top-3 right-3 text-3xl font-display font-bold text-primary/8">{j.step}</div>
+              <div className="absolute top-3 right-3 text-3xl font-display font-bold text-foreground/8">{j.step}</div>
               <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center mb-3">
                 <span className="text-xs font-bold text-secondary">{j.step}</span>
               </div>
-              <h4 className="text-sm font-bold text-primary">{j.title}</h4>
+              <h4 className="text-sm font-bold text-foreground">{j.title}</h4>
               <p className="text-xs text-muted-foreground mt-1 leading-snug">{j.desc}</p>
             </motion.div>
           ))}

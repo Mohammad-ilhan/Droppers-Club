@@ -54,7 +54,7 @@ export function Gallery() {
           className="text-center mb-8 sm:mb-12"
         >
           <p className="text-xs tracking-[0.3em] text-secondary uppercase">Our Facility</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-display font-semibold mt-2 text-primary">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-display font-semibold mt-2 text-foreground">
             Inside <span className="italic text-gradient-gold">Dropper's Club</span>
           </h2>
           <p className="mt-3 text-sm sm:text-base text-muted-foreground max-w-lg mx-auto">
@@ -116,7 +116,7 @@ export function Gallery() {
 
               {/* Info strip */}
               <div className="p-3 sm:p-4">
-                <h3 className="text-sm sm:text-base font-display font-semibold text-primary leading-tight">{it.label}</h3>
+                <h3 className="text-sm sm:text-base font-display font-semibold text-foreground leading-tight">{it.label}</h3>
                 <p className="text-[10px] sm:text-xs text-muted-foreground mt-0.5 leading-snug">{it.shortDesc}</p>
 
                 {/* Colour accent line */}
@@ -196,7 +196,7 @@ export function Gallery() {
                 >
                   {items[active].shortDesc}
                 </div>
-                <h3 className="text-xl sm:text-2xl font-display font-semibold text-primary mb-2">
+                <h3 className="text-xl sm:text-2xl font-display font-semibold text-foreground mb-2">
                   {items[active].label}
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{items[active].desc}</p>

@@ -91,7 +91,7 @@ function FacultyCard({ f, i }: { f: (typeof faculty)[number]; i: number }) {
             >
               {f.subject}
             </div>
-            <div className="text-sm sm:text-base font-display font-bold mt-0.5 text-primary truncate leading-tight">{f.name}</div>
+            <div className="text-sm sm:text-base font-display font-bold mt-0.5 text-foreground truncate leading-tight">{f.name}</div>
             <div className="text-[10px] sm:text-xs text-muted-foreground mt-1 leading-snug">{f.qual}</div>
             <div className="mt-1.5 inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary/10 border border-secondary/20 text-[8px] sm:text-[9px] text-secondary font-bold tracking-wider uppercase">
               {f.exp}
