@@ -508,9 +508,9 @@
     color: oklch(0.72 0.13 72);
   }
 
-  /* ── Navy top bar ── */
+  /* ── Navy/Indigo top bar ── */
   .navy-top-bar {
-    background: oklch(0.24 0.08 265);
+    background: var(--primary);
     color: oklch(1 0 0);
   }
 }
