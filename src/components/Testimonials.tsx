@@ -53,7 +53,7 @@ export function Testimonials() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.07 }}
-                className="bg-white rounded-xl border border-border shadow-card hover:-translate-y-1 hover:shadow-glow-navy transition-all duration-300 overflow-hidden relative"
+                className="bg-card rounded-xl border border-border shadow-card hover:-translate-y-1 hover:shadow-glow-navy transition-all duration-300 overflow-hidden relative"
                 style={{ borderLeft: `3px solid ${color}` }}
               >
                 {/* Quote watermark */}

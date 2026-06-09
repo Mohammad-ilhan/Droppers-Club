@@ -50,7 +50,7 @@ export function WhyUs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.07 }}
-              className="bg-white border border-border rounded-xl p-5 sm:p-6 shadow-card hover:-translate-y-1 hover:shadow-glow-navy transition-all duration-300 flex gap-4"
+              className="bg-card border border-border rounded-xl p-5 sm:p-6 shadow-card hover:-translate-y-1 hover:shadow-glow-navy transition-all duration-300 flex gap-4"
             >
               {/* Gold icon circle */}
               <div className="w-10 h-10 rounded-full bg-secondary/10 border border-secondary/30 flex items-center justify-center shrink-0">
@@ -108,7 +108,7 @@ export function WhyUs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.06 }}
-              className="bg-white border border-border rounded-xl p-4 shadow-card relative overflow-hidden"
+              className="bg-card border border-border rounded-xl p-4 shadow-card relative overflow-hidden"
             >
               <div className="absolute top-3 right-3 text-3xl font-display font-bold text-primary/8">{j.step}</div>
               <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center mb-3">

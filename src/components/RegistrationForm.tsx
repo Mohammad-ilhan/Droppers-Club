@@ -120,7 +120,7 @@ export function RegistrationForm() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="md:col-span-2 space-y-5"
           >
-            <div className="rounded-xl p-5 sm:p-6 shadow-card border border-border bg-white space-y-4">
+            <div className="rounded-xl p-5 sm:p-6 shadow-card border border-border bg-card space-y-4">
               <h3 className="font-display text-lg sm:text-xl font-semibold text-primary">What you get</h3>
               {BENEFITS.map((b) => (
                 <div key={b.text} className="flex items-start gap-3">
@@ -130,7 +130,7 @@ export function RegistrationForm() {
               ))}
             </div>
 
-            <div className="rounded-xl p-4 sm:p-5 border border-border bg-white space-y-3">
+            <div className="rounded-xl p-4 sm:p-5 border border-border bg-card space-y-3">
               {[
                 { icon: Users, label: "Small batch", value: "Max 30 students" },
                 { icon: BookOpen, label: "Study material", value: "Included free" },
@@ -161,7 +161,7 @@ export function RegistrationForm() {
 
             <form
               onSubmit={handleSubmit}
-              className="bg-white rounded-xl border border-border shadow-card overflow-hidden relative"
+              className="bg-card rounded-xl border border-border shadow-card overflow-hidden relative"
             >
               {/* Navy header strip */}
               <div className="bg-primary px-6 py-4">

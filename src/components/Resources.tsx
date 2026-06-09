@@ -12,7 +12,7 @@ const resources = [
 
 export function Resources() {
   return (
-    <section id="resources" className="py-14 sm:py-20 px-4 sm:px-6 bg-white border-t border-border">
+    <section id="resources" className="py-14 sm:py-20 px-4 sm:px-6 bg-card border-t border-border">
       <div className="max-w-6xl mx-auto">
 
         {/* Header */}
@@ -41,7 +41,7 @@ export function Resources() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.07 }}
-              className="group bg-white border border-border rounded-xl overflow-hidden shadow-card hover:-translate-y-1 hover:shadow-glow-navy transition-all duration-300"
+              className="group bg-card border border-border rounded-xl overflow-hidden shadow-card hover:-translate-y-1 hover:shadow-glow-navy transition-all duration-300"
               style={{ borderLeft: `3px solid ${r.color}` }}
             >
               <div className="p-4 sm:p-5 flex items-start gap-4">

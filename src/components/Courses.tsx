@@ -60,7 +60,7 @@ const courses = [
 
 export function Courses() {
   return (
-    <section id="courses" className="py-14 sm:py-20 px-4 sm:px-6 bg-white">
+    <section id="courses" className="py-14 sm:py-20 px-4 sm:px-6 bg-card">
       <div className="max-w-6xl mx-auto">
 
         {/* Header */}
@@ -89,7 +89,7 @@ export function Courses() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.07, duration: 0.5 }}
-              className="group bg-white border border-border rounded-xl overflow-hidden shadow-card hover:shadow-glow-navy hover:-translate-y-1 transition-all duration-300"
+              className="group bg-card border border-border rounded-xl overflow-hidden shadow-card hover:shadow-glow-navy hover:-translate-y-1 transition-all duration-300"
             >
               {/* Top accent bar */}
               <div className="h-[3px]" style={{ background: c.accent }} />
