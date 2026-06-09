@@ -60,7 +60,7 @@ const courses = [
 
 export function Courses() {
   return (
-    <section id="courses" className="py-14 sm:py-20 px-4 sm:px-6 bg-white">
+    <section id="courses" className="py-14 sm:py-20 px-4 sm:px-6 bg-card">
       <div className="max-w-6xl mx-auto">
 
         {/* Header */}
@@ -71,7 +71,7 @@ export function Courses() {
           className="mb-10 sm:mb-14"
         >
           <p className="text-xs font-bold tracking-[0.3em] text-secondary uppercase mb-2">Our Programs</p>
-          <h2 className="text-2xl sm:text-4xl font-display font-bold text-primary">
+          <h2 className="text-2xl sm:text-4xl font-display font-bold text-foreground">
             Courses That Shape Futures
           </h2>
           <div className="mt-2 w-12 h-[3px] bg-gradient-gold rounded-full" />
@@ -89,7 +89,7 @@ export function Courses() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.07, duration: 0.5 }}
-              className="group bg-white border border-border rounded-xl overflow-hidden shadow-card hover:shadow-glow-navy hover:-translate-y-1 transition-all duration-300"
+              className="group bg-card border border-border rounded-xl overflow-hidden shadow-card hover:shadow-glow-navy hover:-translate-y-1 transition-all duration-300"
             >
               {/* Top accent bar */}
               <div className="h-[3px]" style={{ background: c.accent }} />
@@ -112,7 +112,7 @@ export function Courses() {
                 </div>
 
                 {/* Title & desc */}
-                <h3 className="text-base sm:text-lg font-display font-bold text-primary leading-snug">{c.title}</h3>
+                <h3 className="text-base sm:text-lg font-display font-bold text-foreground leading-snug">{c.title}</h3>
                 <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{c.desc}</p>
 
                 {/* Meta row */}
@@ -127,7 +127,7 @@ export function Courses() {
                   </div>
                   <a
                     href="#register"
-                    className="ml-auto flex items-center gap-1 text-xs font-bold text-primary hover:text-secondary transition-colors group/link"
+                    className="ml-auto flex items-center gap-1 text-xs font-bold text-foreground hover:text-secondary transition-colors group/link"
                   >
                     Enroll
                     <ArrowRight className="w-3.5 h-3.5 group-hover/link:translate-x-0.5 transition-transform" />

@@ -29,11 +29,11 @@ export function Testimonials() {
         >
           <div className="flex items-center gap-1.5 mb-3">
             {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 text-secondary fill-secondary" />)}
-            <span className="ml-1 text-sm font-bold text-primary">4.9</span>
+            <span className="ml-1 text-sm font-bold text-foreground">4.9</span>
             <span className="text-muted-foreground text-sm">/ 5.0 · 200+ reviews</span>
           </div>
           <p className="text-xs font-bold tracking-[0.3em] text-secondary uppercase mb-2">Student Reviews</p>
-          <h2 className="text-2xl sm:text-4xl font-display font-bold text-primary">
+          <h2 className="text-2xl sm:text-4xl font-display font-bold text-foreground">
             Words from Our Toppers
           </h2>
           <div className="mt-2 w-12 h-[3px] bg-gradient-gold rounded-full" />
@@ -53,11 +53,11 @@ export function Testimonials() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.07 }}
-                className="bg-white rounded-xl border border-border shadow-card hover:-translate-y-1 hover:shadow-glow-navy transition-all duration-300 overflow-hidden relative"
+                className="bg-card rounded-xl border border-border shadow-card hover:-translate-y-1 hover:shadow-glow-navy transition-all duration-300 overflow-hidden relative"
                 style={{ borderLeft: `3px solid ${color}` }}
               >
                 {/* Quote watermark */}
-                <Quote className="absolute top-4 right-4 w-8 h-8 text-primary/5" />
+                <Quote className="absolute top-4 right-4 w-8 h-8 text-foreground/5" />
 
                 <div className="p-5">
                   {/* Stars */}
@@ -72,7 +72,7 @@ export function Testimonials() {
                     <img src={t.image} alt={t.name} className="w-9 h-9 rounded-full object-cover shrink-0" style={{ boxShadow: `0 0 0 2px ${color}40` }} />
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-1">
-                        <span className="text-sm font-bold text-primary truncate">{t.name}</span>
+                        <span className="text-sm font-bold text-foreground truncate">{t.name}</span>
                         <BadgeCheck className="w-3.5 h-3.5 shrink-0" style={{ color }} />
                       </div>
                       <div className="text-xs font-medium truncate mt-0.5" style={{ color }}>{t.role}</div>

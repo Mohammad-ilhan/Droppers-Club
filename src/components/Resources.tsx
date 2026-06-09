@@ -12,7 +12,7 @@ const resources = [
 
 export function Resources() {
   return (
-    <section id="resources" className="py-14 sm:py-20 px-4 sm:px-6 bg-white border-t border-border">
+    <section id="resources" className="py-14 sm:py-20 px-4 sm:px-6 bg-card border-t border-border">
       <div className="max-w-6xl mx-auto">
 
         {/* Header */}
@@ -23,7 +23,7 @@ export function Resources() {
           className="mb-10 sm:mb-14"
         >
           <p className="text-xs font-bold tracking-[0.3em] text-secondary uppercase mb-2">Study Material</p>
-          <h2 className="text-2xl sm:text-4xl font-display font-bold text-primary">
+          <h2 className="text-2xl sm:text-4xl font-display font-bold text-foreground">
             Notes, PDFs & Practice Sheets
           </h2>
           <div className="mt-2 w-12 h-[3px] bg-gradient-gold rounded-full" />
@@ -41,7 +41,7 @@ export function Resources() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.07 }}
-              className="group bg-white border border-border rounded-xl overflow-hidden shadow-card hover:-translate-y-1 hover:shadow-glow-navy transition-all duration-300"
+              className="group bg-card border border-border rounded-xl overflow-hidden shadow-card hover:-translate-y-1 hover:shadow-glow-navy transition-all duration-300"
               style={{ borderLeft: `3px solid ${r.color}` }}
             >
               <div className="p-4 sm:p-5 flex items-start gap-4">
@@ -61,7 +61,7 @@ export function Resources() {
                   >
                     {r.subject}
                   </span>
-                  <h3 className="text-sm font-bold text-primary leading-snug mt-0.5 truncate">{r.title}</h3>
+                  <h3 className="text-sm font-bold text-foreground leading-snug mt-0.5 truncate">{r.title}</h3>
                   <p className="text-xs text-muted-foreground mt-0.5">{r.type} · {r.size}</p>
                 </div>
               </div>
@@ -77,7 +77,7 @@ export function Resources() {
                     <span>Enroll to access</span>
                   </div>
                 ) : (
-                  <button className="flex items-center gap-1.5 text-xs font-bold text-primary hover:text-secondary transition-colors">
+                  <button className="flex items-center gap-1.5 text-xs font-bold text-foreground hover:text-secondary transition-colors">
                     <Download className="w-3.5 h-3.5" />
                     Download
                   </button>
